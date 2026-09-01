@@ -52,7 +52,7 @@ export const TransactionLatest = () => {
       <Box className={styles.transitionsContainer}>
         {transactions?.map((transaction) => (
           <TransactionItem
-            onClick={() => navigate("/transaction")}
+            onClick={() => navigate(AppRoutes.TRANSACTION_DETAILS)}
             key={transaction.id}
             icon={transaction.icon}
             name={transaction.name}

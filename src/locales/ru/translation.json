@@ -130,6 +130,9 @@
     "empty": "Список транзакций пуст",
     "errorMessage": "Ошибка загрузки"
   },
+  "transactionDetails":{
+"title":"Детали операции"
+  },
   "search": {
     "title": "Поиск"
   },
