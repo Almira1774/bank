@@ -1,1 +1,0 @@
-import TransactionDetails from "./TransactionDetails";

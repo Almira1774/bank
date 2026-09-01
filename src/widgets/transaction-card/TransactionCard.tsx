@@ -20,15 +20,15 @@ interface TransactionCardProps {
   onClick?: () => void;
 }
 
-const TransactionCard :React.FC<TransactionCardProps> = () => {
-    return (
-        <Box>
-            <Box>
-                <div>Hello</div>
-            </Box>
-            <Box></Box>
-        </Box>
-    )
+const TransactionCard: React.FC<TransactionCardProps> = () => {
+  return (
+    <Box>
+      <Box>
+        <div>Hello</div>
+      </Box>
+      <Box></Box>
+    </Box>
+  );
 };
 
 export { TransactionCard };
