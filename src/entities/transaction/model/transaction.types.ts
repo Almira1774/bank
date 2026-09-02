@@ -22,6 +22,15 @@ export interface TransactionPageResponse {
   empty: boolean;
 }
 
+export interface TransactionDetailsResponse extends TransactionResponse{
+icon: string;
+  category: string;
+  commission: number;
+  country: string;          
+  merchantLocation: string; 
+  authCode: string;
+}
+
 export interface CreateTransactionRequest {
   idempotencyKey: string;
   sourceAccountId: string;

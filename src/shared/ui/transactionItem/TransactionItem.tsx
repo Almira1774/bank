@@ -35,7 +35,6 @@ const TransactionItem = ({
             className={`${style.icon}${style[category.toLowerCase()] || ""}`}
             component="img"
             src={icon}
-            style={{ width: 14, height: 18 }}
             alt="icon"
           />
         </Box>
