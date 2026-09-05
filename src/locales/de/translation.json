@@ -144,12 +144,16 @@
       "Kazakhstan": "Kasachstan"
     },
     "labels": {
+      "amount": "Betrag",
+      "category": "Kategorie",
+      "status": "Status",
       "dateTime": "Datum & Uhrzeit",
       "sourceAccount": "Belastungskonto",
       "commission": "Gebühr",
       "authCode": "Autorisierungscode",
       "merchantLocation": "Händlerstandort",
-      "countryLabel": "Land"
+      "countryLabel": "Land",
+      "transactionId": "Transaktions-ID"
     }
   },
   "accountsManagement": {

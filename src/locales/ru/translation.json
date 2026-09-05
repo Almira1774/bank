@@ -136,12 +136,16 @@
       "Kazakhstan": "Казахстан"
     },
     "labels": {
+      "amount": "Сумма",
       "dateTime": "Дата и время",
+      "category": "Категория",
+      "status": "Статус",
       "sourceAccount": "Счёт списания",
       "commission": "Комиссия",
       "authCode": "Код авторизации",
       "merchantLocation": "Место проведения",
-      "countryLabel": "Страна"
+      "countryLabel": "Страна",
+      "transactionId": "id Транзакции"
     }
   },
   "search": {

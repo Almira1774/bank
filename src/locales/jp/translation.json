@@ -144,12 +144,16 @@
       "Kazakhstan": "カザフスタン"
     },
     "labels": {
+      "amount": "金額",
+      "category": "カテゴリー",
+      "status": "ステータス",
       "dateTime": "日時",
       "sourceAccount": "振替元口座",
       "commission": "手数料",
       "authCode": "承認コード",
       "merchantLocation": "加盟店所在地",
-      "countryLabel": "国"
+      "countryLabel": "国",
+      "transactionId": "取引ID"
     }
   },
   "accountsManagement": {

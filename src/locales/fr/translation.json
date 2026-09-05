@@ -144,12 +144,16 @@
       "Kazakhstan": "Kazakhstan"
     },
     "labels": {
+      "amount": "Montant",
+      "category": "Catégorie",
+      "status": "Statut",
       "dateTime": "Date et heure",
       "sourceAccount": "Compte de débit",
       "commission": "Frais",
       "authCode": "Code d'autorisation",
       "merchantLocation": "Emplacement du commerçant",
-      "countryLabel": "Pays"
+      "countryLabel": "Pays",
+      "transactionId": "ID de la transaction"
     }
   },
   "accountsManagement": {

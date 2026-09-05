@@ -153,12 +153,16 @@
       "Kazakhstan": "Kazakhstan"
     },
     "labels": {
+      "amount":"Amount",
+      "category": "Category",
+      "status":"Status",
       "dateTime": "Date & Time",
       "sourceAccount": "Source Account",
       "commission": "Fee",
       "authCode": "Authorization Code",
       "merchantLocation": "Merchant Location",
-      "countryLabel": "Country"
+      "countryLabel": "Country",
+      "transactionId": "Transaction id"
     }
   },
   "accounts": {
