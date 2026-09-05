@@ -1,5 +1,9 @@
-.container{
-    margin-top: 150px;
+.container {
+  margin-top: 50px;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: var(--color-item-bg);
 }
 
 .icon {
@@ -16,6 +20,7 @@
 .icon img {
   filter: var(--icon-filter);
 }
+
 .entertainment {
   background-color: var(--color-entertainment-bg);
 }
@@ -30,4 +35,25 @@
 
 .shopping {
   background-color: var(--color-shop-bg);
+}
+
+.statusIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.statusCompleted {
+  color: rgba(31, 170, 71, 1);
+}
+
+.statusFailed {
+  color: rgba(225, 99, 100, 1);
+}
+
+.statusPending {
+  color: rgba(247, 159, 26, 1);
+}
+
+.amount {
+  margin-left: auto;
 }

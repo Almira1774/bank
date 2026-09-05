@@ -1,4 +1,5 @@
 import { TransactionStatus } from "../model/transactionStatus";
+import type { TransactionDirection } from "./transactionDirection";
 
 export interface TransactionResponse {
   id: string;
@@ -30,6 +31,7 @@ export interface TransactionDetailsResponse extends TransactionResponse {
   country: string;
   merchantLocation: string;
   authCode: string;
+  type:TransactionDirection;
 }
 
 export interface CreateTransactionRequest {
