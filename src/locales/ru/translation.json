@@ -57,21 +57,7 @@
     "joined": "Присоединился {{date}}",
     "cancel": "Отмена",
     "saveChanges": "Сохранить изменения",
-    "edit": "Редактировать",
-    "months": [
-      "Января",
-      "Февраля",
-      "Марта",
-      "Апреля",
-      "Мая",
-      "Июня",
-      "Июля",
-      "Августа",
-      "Сентября",
-      "Октября",
-      "Ноября",
-      "Декабря"
-    ]
+    "edit": "Редактировать"
   },
   "statistics": {
     "title": "Статистика"
@@ -121,24 +107,45 @@
     "title": "История транзакций",
     "seeAll": "Смотреть все",
     "today": "Сегодня",
-    "empty": "Список транзакций пуст"
+    "empty": "Поле транзакций пусто"
   },
   "transactionLatest": {
     "title": "Последние операции",
-    "seeAll": "Смотреть все",
+    "seeAll": "Показать все",
     "loading": "Загрузка...",
-    "empty": "Список транзакций пуст",
-    "errorMessage": "Ошибка загрузки"
+    "errorMessage": "Ошибка загрузки",
+    "empty": "Список операций пуст"
   },
   "transactionDetails": {
-    "title": "Детали операции"
+    "title": "Детали операции",
+    "status": {
+      "COMPLETED": "Успешно",
+      "FAILED": "Отклонено",
+      "PENDING": "В обработке"
+    },
+    "category": {
+      "Entertainment": "Развлечения",
+      "Shopping": "Покупки",
+      "Transaction": "Переводы",
+      "Music": "Музыка"
+    },
+    "country": {
+      "UnitedStates": "Соединённые Штаты",
+      "Russia": "Россия",
+      "Sweden": "Швеция",
+      "Kazakhstan": "Казахстан"
+    },
+    "labels": {
+      "dateTime": "Дата и время",
+      "sourceAccount": "Счёт списания",
+      "commission": "Комиссия",
+      "authCode": "Код авторизации",
+      "merchantLocation": "Место проведения",
+      "countryLabel": "Страна"
+    }
   },
   "search": {
     "title": "Поиск"
-  },
-  "accounts": {
-    "loadError": "Не удалось загрузить счета",
-    "empty": "У вас пока нет счетов"
   },
   "accountsManagement": {
     "title": "Управление счетами",
@@ -215,23 +222,6 @@
     "enterAmount": "Введите сумму",
     "changeCurrency": "Изменить валюту?",
     "sendMoney": "Отправить деньги"
-  },
-  "transferBetweenAccounts": {
-    "title": "Между своими счетами",
-    "history": "История переводов",
-    "source": "Откуда",
-    "available": "Доступно",
-    "swapAccounts": "Поменять счета местами",
-    "destination": "Куда",
-    "afterTransfer": "После перевода",
-    "exchangeRate": "Курс обмена",
-    "updated": "Обновлено 15 секунд назад",
-    "commission": "Комиссия",
-    "free": "Бесплатно",
-    "recipientGets": "Получатель получит",
-    "processingTime": "Срок зачисления",
-    "instantly": "Моментально",
-    "transferButton": "Перевести деньги"
   },
   "cardTransfer": {
     "title": "На карту",

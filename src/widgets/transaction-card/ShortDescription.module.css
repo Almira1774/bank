@@ -1,0 +1,33 @@
+.container{
+    margin-top: 150px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: var(--color-footer-bg);
+  flex-shrink: 0;
+}
+
+.icon img {
+  filter: var(--icon-filter);
+}
+.entertainment {
+  background-color: var(--color-entertainment-bg);
+}
+
+.music {
+  background-color: var(--color-music-bg);
+}
+
+.transaction {
+  background-color: var(--color-transaction-bg);
+}
+
+.shopping {
+  background-color: var(--color-shop-bg);
+}

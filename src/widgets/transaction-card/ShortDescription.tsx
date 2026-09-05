@@ -1,9 +1,9 @@
-import type { TransactionDetailsResponse } from "@/entities/transaction/model/transaction.types";
-import { Box, Stack, Typography } from "@mui/material"
-
+import { Box, Stack, Typography } from "@mui/material";
+import styles from './ShortDescription.module.css';
+import { useTranslation } from "react-i18next";
 type ShortDescriptionProps = {
     icon: string;
-    sourceAccountId: string;
+    name: string;
     createdAt: string;
     status: string;
     amount: number;
@@ -11,29 +11,34 @@ type ShortDescriptionProps = {
 
 }
 
-const ShortDescription = ({ icon, sourceAccountId, status, createdAt, amount, category }: ShortDescriptionProps) => {
+const ShortDescription = ({ icon, name, status, createdAt, amount, category }: ShortDescriptionProps) => {
+   const {t}= useTranslation();
+   
     return (
-        <Stack >
-            <Box component='img' src={icon}></Box>
-            <Box>
-                <Typography>{sourceAccountId}</Typography>
-                <Typography>{category}</Typography>
-                <Box></Box>
-                <Box>
-                    <Typography>{createdAt}</Typography>
+        <Stack
+            className={styles.container}
+            direction="row">
+            <Box >
+                <Box component='img' src={icon} className={styles.icon}></Box>
+            </Box>
 
-                </Box>
-                <Box>
-                    <Typography>{status}</Typography>
-                </Box>
-                <Box>
-                    <Typography>{amount}</Typography>
-                </Box>
-            </Box>
-            <Box>
+            <Stack direction="column">
+                <Typography>{name}</Typography>
+                <Typography>{category}</Typography>
+                <Typography>{createdAt}</Typography>
+
+            </Stack>
+            <Stack direction="column">
+                <Typography>{status}</Typography>
+            </Stack>
+            <Stack>
+                <Typography>{amount}</Typography>
+            </Stack>
+
+            <Stack>
                 <Box></Box>
                 <Box></Box>
-            </Box>
+            </Stack>
             <Box></Box>
         </Stack>
     )

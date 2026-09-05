@@ -26,7 +26,7 @@
   height: 42px;
   border-radius: 50%;
   background-color: var(--color-footer-bg);
-  flex-shrink: 0ж;
+  flex-shrink: 0;
 }
 
 .icon img {

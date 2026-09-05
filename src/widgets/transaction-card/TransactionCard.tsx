@@ -10,11 +10,11 @@ const TransactionCard = ({transaction}:{transaction:TransactionDetailsResponse})
     <Box> 
       <ShortDescription 
       icon={transaction.icon}
+      name={transaction.name}
       status={transaction.status}
       amount={transaction.amount}
       createdAt={transaction.createdAt}
       category={transaction.category}
-      sourceAccountId={transaction.sourceAccountId}
 
       />
       <Box>

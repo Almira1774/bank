@@ -133,6 +133,34 @@
     "errorMessage": "Loading error",
     "empty": "Transaction field is empty"
   },
+  "transactionDetails": {
+    "title": "Transaction Details",
+    "status": {
+      "COMPLETED": "Success",
+      "FAILED": "Declined",
+      "PENDING": "Pending"
+    },
+    "category": {
+      "Entertainment": "Entertainment",
+      "Shopping": "Shopping",
+      "Transaction": "Transfers",
+      "Music": "Music"
+    },
+    "country": {
+      "UnitedStates": "United States",
+      "Russia": "Russia",
+      "Sweden": "Sweden",
+      "Kazakhstan": "Kazakhstan"
+    },
+    "labels": {
+      "dateTime": "Date & Time",
+      "sourceAccount": "Source Account",
+      "commission": "Fee",
+      "authCode": "Authorization Code",
+      "merchantLocation": "Merchant Location",
+      "countryLabel": "Country"
+    }
+  },
   "accounts": {
     "loadError": "Failed to load accounts",
     "empty": "You don't have any accounts yet"

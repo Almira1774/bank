@@ -124,6 +124,34 @@
     "empty": "Le champ de transaction est vide",
     "errorMessage": "Erreur de chargement"
   },
+  "transactionDetails": {
+    "title": "Détails de la transaction",
+    "status": {
+      "COMPLETED": "Réussi",
+      "FAILED": "Refusé",
+      "PENDING": "En attente"
+    },
+    "category": {
+      "Entertainment": "Divertissement",
+      "Shopping": "Achats",
+      "Transaction": "Virements",
+      "Music": "Musique"
+    },
+    "country": {
+      "UnitedStates": "États-Unis",
+      "Russia": "Russie",
+      "Sweden": "Suède",
+      "Kazakhstan": "Kazakhstan"
+    },
+    "labels": {
+      "dateTime": "Date et heure",
+      "sourceAccount": "Compte de débit",
+      "commission": "Frais",
+      "authCode": "Code d'autorisation",
+      "merchantLocation": "Emplacement du commerçant",
+      "countryLabel": "Pays"
+    }
+  },
   "accountsManagement": {
     "title": "Gestion des comptes",
     "createAccount": "Créer un compte",

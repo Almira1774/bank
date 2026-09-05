@@ -124,6 +124,34 @@
     "empty": "取引フィールドは空っています",
     "errorMessage": "読み込みエラー"
   },
+  "transactionDetails": {
+    "title": "取引の詳細",
+    "status": {
+      "COMPLETED": "成功",
+      "FAILED": "拒否",
+      "PENDING": "保留中"
+    },
+    "category": {
+      "Entertainment": "エンターテインメント",
+      "Shopping": "ショッピング",
+      "Transaction": "振込",
+      "Music": "音楽"
+    },
+    "country": {
+      "UnitedStates": "アメリカ合衆国",
+      "Russia": "ロシア",
+      "Sweden": "スウェーデン",
+      "Kazakhstan": "カザフスタン"
+    },
+    "labels": {
+      "dateTime": "日時",
+      "sourceAccount": "振替元口座",
+      "commission": "手数料",
+      "authCode": "承認コード",
+      "merchantLocation": "加盟店所在地",
+      "countryLabel": "国"
+    }
+  },
   "accountsManagement": {
     "title": "口座管理",
     "createAccount": "口座を作成",

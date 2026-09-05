@@ -124,6 +124,34 @@
     "empty": "Die Transaktionsliste ist leer",
     "errorMessage": "Ladefehler"
   },
+  "transactionDetails": {
+    "title": "Transaktionsdetails",
+    "status": {
+      "COMPLETED": "Erfolgreich",
+      "FAILED": "Abgelehnt",
+      "PENDING": "In Bearbeitung"
+    },
+    "category": {
+      "Entertainment": "Unterhaltung",
+      "Shopping": "Einkaufen",
+      "Transaction": "Überweisungen",
+      "Music": "Musik"
+    },
+    "country": {
+      "UnitedStates": "Vereinigte Staaten",
+      "Russia": "Russland",
+      "Sweden": "Schweden",
+      "Kazakhstan": "Kasachstan"
+    },
+    "labels": {
+      "dateTime": "Datum & Uhrzeit",
+      "sourceAccount": "Belastungskonto",
+      "commission": "Gebühr",
+      "authCode": "Autorisierungscode",
+      "merchantLocation": "Händlerstandort",
+      "countryLabel": "Land"
+    }
+  },
   "accountsManagement": {
     "title": "Kontoverwaltung",
     "createAccount": "Konto erstellen",

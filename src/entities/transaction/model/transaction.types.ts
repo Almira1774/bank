@@ -22,12 +22,13 @@ export interface TransactionPageResponse {
   empty: boolean;
 }
 
-export interface TransactionDetailsResponse extends TransactionResponse{
-icon: string;
+export interface TransactionDetailsResponse extends TransactionResponse {
+  icon: string;
+  name: string;
   category: string;
   commission: number;
-  country: string;          
-  merchantLocation: string; 
+  country: string;
+  merchantLocation: string;
   authCode: string;
 }
 
