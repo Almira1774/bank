@@ -9,7 +9,7 @@ import {
   statusStylesMap,
   statusIconsMap,
   statusCreditMap,
-} from "../helpers.ts/shortDescriptionMaps";
+} from "../../../lib/transactionDescriptionMaps";
 import { TransactionStatus } from "@/entities/transaction/model/transactionStatus";
 import { TransactionDirection } from "@/entities/transaction/model/transactionDirection";
 import styles from "./ShortDescription.module.css";
@@ -43,37 +43,38 @@ const ShortDescription = ({
   const StatusiconStyle = statusStylesMap[status];
   return (
     <Stack className={styles.container} direction="row">
-      <Box className={styles.icon}>
+      <Box className={styles.iconContainer}>
         <Box
-          className={`${styles.icon}${statusIconsMap || ""}`}
+          className={styles.brandLogo}
           component="img"
+          alt="brand logo"
           src={icon}
         ></Box>
       </Box>
 
       <Stack direction="column">
-        <Typography>
+        <Typography className={styles.text}>
           {t(`transactionItem.name.${name}`, { defaultValue: name })}
         </Typography>
         <Typography>{t(`transactionDetails.category.${category}`)}</Typography>
-        <Stack direction="row">
+        <Box className = {styles.date}>
           <Typography>{date}</Typography>
           <Typography>{time}</Typography>
-        </Stack>
-      </Stack>
-      <Stack direction="row">
-        <Box>
-          <StatusIcon className={`${StatusiconStyle || ""}`}></StatusIcon>
         </Box>
+      </Stack>
 
-        <Typography className={statusStylesMap[status]}>
+      <Box  className={styles.statusContainer}>
+        <StatusIcon
+          className={`${styles.statusIcon} ${styles[StatusiconStyle]}`}></StatusIcon>
+        <Typography className={styles[statusStylesMap[status]]}>
           {t(`transactionDetails.status.${status}`)}
         </Typography>
-      </Stack>
-      <Stack direction="row">
-        <Typography>{statusCreditMap[type]}</Typography>
-        <Typography className={styles.amount}>{formattedCurrency}</Typography>
-      </Stack>
+      </Box>
+      <Box className={styles.amountContainer}>
+        <Typography className={styles.amount}>
+          {statusCreditMap[type]} {formattedCurrency}
+        </Typography>
+      </Box>
     </Stack>
   );
 };

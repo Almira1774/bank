@@ -1,24 +1,41 @@
 .container {
-  margin-top: 50px;
+  margin-top: 30px;
   justify-content: space-between;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 20px;
   background-color: var(--color-item-bg);
+  align-items: center;
+  border-radius: 3%;
+  overflow: hidden;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
-.icon {
+.text.text {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.iconContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background-color: var(--color-footer-bg);
+  background-color: var(--color-border);
   flex-shrink: 0;
 }
 
-.icon img {
+
+.brandLogo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
   filter: var(--icon-filter);
+}
+
+.statusContainer {
+  margin-top: auto;
 }
 
 .entertainment {
@@ -37,9 +54,19 @@
   background-color: var(--color-shop-bg);
 }
 
-.statusIcon {
-  width: 20px;
-  height: 20px;
+.date {
+  display: flex;
+  flex-direction: row;
+  gap: 5px
+}
+
+.statusContainer {
+  display: flex;
+  align-items: center;
+}
+
+.statusIcon.statusIcon {
+  font-size: 18px;
 }
 
 .statusCompleted {
@@ -54,6 +81,12 @@
   color: rgba(247, 159, 26, 1);
 }
 
-.amount {
+.amountContainer {
+  margin-bottom: auto;
+}
+
+.amount.amount {
   margin-left: auto;
+  font-weight: 700;
+  font-size: 18px;
 }

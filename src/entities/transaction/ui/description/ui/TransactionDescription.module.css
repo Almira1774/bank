@@ -1,5 +1,62 @@
-.container {
-    display:flex;
+.descriptionContainer {
+    margin-top: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 3%;
+    overflow: hidden;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: var(--color-item-bg);
+}
+
+.transactionWrapper {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.wrapper {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.divider {
+    background-color: var(--color-divider);
+}
+
+
+
+
+.date {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    gap: 5px;
+}
+
+.statusContainer {
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.statusIcon.statusIcon {
+    font-size: 18px;
+    margin-left: auto;
+}
+
+
+.statusCompleted {
+    color: rgba(31, 170, 71, 1);
+}
+
+.statusFailed {
+    color: rgba(225, 99, 100, 1);
+}
+
+.statusPending {
+    color: rgba(247, 159, 26, 1);
 }

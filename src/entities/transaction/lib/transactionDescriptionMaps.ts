@@ -6,13 +6,13 @@ import ExpandCircleDownIcon from "@mui/icons-material/ExpandCircleDown";
 import ErrorIcon from "@mui/icons-material/Error";
 import ChangeCircleIcon from "@mui/icons-material/ChangeCircle";
 import HistoryToggleOffIcon from "@mui/icons-material/HistoryToggleOff";
-import styles from "../ui/ShortDescription.module.css";
+
 
 export const statusStylesMap: Record<TransactionStatus, string> = {
-  [TransactionStatus.COMPLETED]: styles.statusCompleted,
-  [TransactionStatus.PENDING]: styles.statusPending,
-  [TransactionStatus.FAILED]: styles.statusFailed,
-  [TransactionStatus.COMPENSATED]: styles.statusCompensaited,
+  [TransactionStatus.COMPLETED]: "statusCompleted",
+  [TransactionStatus.PENDING]: "statusPending",
+  [TransactionStatus.FAILED]: "statusFailed",
+  [TransactionStatus.COMPENSATED]: "statusCompensaited",
 };
 
 export const statusIconsMap: Record<TransactionStatus, ComponentType<SvgIconProps>> = {
