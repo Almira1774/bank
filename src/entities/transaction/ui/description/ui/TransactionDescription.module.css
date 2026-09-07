@@ -26,7 +26,14 @@
     background-color: var(--color-divider);
 }
 
+.leftSection {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
+.rightSection {
+    text-align: end;
+}
 
 
 .date {

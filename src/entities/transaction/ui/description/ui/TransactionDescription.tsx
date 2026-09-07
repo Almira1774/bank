@@ -57,12 +57,12 @@ const TransactionDescription = ({
 
             <Box className={styles.transactionWrapper}>
                 <Box className={styles.wrapper}>
-                    <Typography>{t(`transactionDetails.labels.amount`)}</Typography>
+                    <Typography className={styles.leftSection}>{t(`transactionDetails.labels.amount`)}</Typography>
                     <Typography>{statusCreditMap[type]}</Typography>
                     <Typography>{formattedAmount}</Typography>
                 </Box>
                 <Box className={styles.wrapper}>
-                    <Typography>{t(`transactionDetails.labels.commission`)}</Typography>
+                    <Typography className={styles.leftSection}>{t(`transactionDetails.labels.commission`)}</Typography>
                     <Typography>{commission}</Typography>
                 </Box>
 
@@ -72,17 +72,17 @@ const TransactionDescription = ({
                 className={styles.divider}></Divider>
             <Box className={styles.transactionWrapper}>
                 <Box className={styles.wrapper}>
-                    <Typography>{t(`transactionDetails.labels.sourceAccount`)}</Typography>
-                    <Typography>{sourceAccountId}</Typography>
+                    <Typography className={styles.leftSection}>{t(`transactionDetails.labels.sourceAccount`)}</Typography>
+                    <Typography className={styles.rightSection}>{sourceAccountId}</Typography>
                 </Box>
 
                 <Box className={styles.wrapper}>
-                    <Typography>{t(`transactionDetails.labels.category`)}</Typography>
+                    <Typography className={styles.leftSection}>{t(`transactionDetails.labels.category`)}</Typography>
                     <Typography>{t(`transactionDetails.category.${category}`)}</Typography>
                 </Box>
 
                 <Box className={styles.statusContainer}>
-                    <Typography>{t(`transactionDetails.labels.status`)} </Typography>
+                    <Typography className={styles.leftSection}>{t(`transactionDetails.labels.status`)} </Typography>
                     <StatusIcon
                         className={`${styles.statusIcon} ${styles[statusStylesMap[status]]}`}></StatusIcon>
                     <Typography className={styles[statusStylesMap[status]]}>
@@ -94,23 +94,23 @@ const TransactionDescription = ({
                 className={styles.divider}></Divider>
             <Box className={styles.transactionWrapper}>
                 <Box className={styles.wrapper}>
-                    <Typography>{t(`transactionDetails.labels.dateTime`)} </Typography>
+                    <Typography className={styles.leftSection}>{t(`transactionDetails.labels.dateTime`)} </Typography>
                     <Box className={styles.date}>
-                        <Typography >{formattedDate}</Typography>
-                        <Typography>{formattedTime}</Typography>
+                        <Typography className={styles.rightSection}>{formattedDate}</Typography>
+                        <Typography className={styles.rightSection}>{formattedTime}</Typography>
                     </Box>
 
                 </Box>
                 <Box className={styles.wrapper}>
-                    <Typography>{t(`transactionDetails.labels.merchantLocation`)} </Typography>
-                    <Typography>{merchantLocation}</Typography>
+                    <Typography className={styles.leftSection}>{t(`transactionDetails.labels.merchantLocation`)} </Typography>
+                    <Typography className={styles.rightSection}>{merchantLocation}</Typography>
                 </Box>
                 <Box className={styles.wrapper}>
-                    <Typography>{t(`transactionDetails.labels.countryLabel`)} </Typography>
-                    <Typography>{t(`transactionDetails.country.${country}`)}</Typography>
+                    <Typography className={styles.leftSection}>{t(`transactionDetails.labels.countryLabel`)} </Typography>
+                    <Typography className={styles.rightSection}>{t(`transactionDetails.country.${country}`)}</Typography>
                 </Box>
                 <Box className={styles.wrapper}>
-                    <Typography>{t(`transactionDetails.labels.transactionId`)} </Typography>
+                    <Typography className={styles.leftSection}>{t(`transactionDetails.labels.transactionId`)} </Typography>
                     <Typography>{id}</Typography>
                 </Box>
             </Box>
