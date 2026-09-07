@@ -97,6 +97,12 @@
     "jp": "Japanese",
     "fr": "French"
   },
+  "country": {
+    "UnitedStates": "United States",
+    "Russia": "Russia",
+    "Sweden": "Sweden",
+    "Kazakhstan": "Kazakhstan"
+  },
   "transaction": {
     "title": "Transaction",
     "sellAll": "Sell All",
@@ -146,16 +152,10 @@
       "Transaction": "Transfers",
       "Music": "Music"
     },
-    "country": {
-      "UnitedStates": "United States",
-      "Russia": "Russia",
-      "Sweden": "Sweden",
-      "Kazakhstan": "Kazakhstan"
-    },
     "labels": {
-      "amount":"Amount",
+      "amount": "Amount",
       "category": "Category",
-      "status":"Status",
+      "status": "Status",
       "dateTime": "Date & Time",
       "sourceAccount": "Source Account",
       "commission": "Fee",

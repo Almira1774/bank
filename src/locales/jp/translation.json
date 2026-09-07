@@ -94,6 +94,12 @@
     "jp": "日本語",
     "fr": "フランス語"
   },
+  "country": {
+    "UnitedStates": "アメリカ合衆国",
+    "Russia": "ロシア",
+    "Sweden": "スウェーデン",
+    "Kazakhstan": "カザフスタン"
+  },
   "transaction": {
     "title": "取引",
     "sellAll": "すべて売却",
@@ -137,12 +143,6 @@
       "Transaction": "振込",
       "Music": "音楽"
     },
-    "country": {
-      "UnitedStates": "アメリカ合衆国",
-      "Russia": "ロシア",
-      "Sweden": "スウェーデン",
-      "Kazakhstan": "カザフスタン"
-    },
     "labels": {
       "amount": "金額",
       "category": "カテゴリー",
@@ -155,7 +155,6 @@
       "countryLabel": "国",
       "transactionId": "取引ID",
       "downloadReceipt": "レシートをダウンロード"
-
     }
   },
   "accountsManagement": {

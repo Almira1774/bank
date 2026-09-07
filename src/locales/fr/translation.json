@@ -94,6 +94,12 @@
     "jp": "Japonais",
     "fr": "Français"
   },
+  "country": {
+    "UnitedStates": "États-Unis",
+    "Russia": "Russie",
+    "Sweden": "Suède",
+    "Kazakhstan": "Kazakhstan"
+  },
   "transaction": {
     "title": "Transaction",
     "sellAll": "Tout vendre",
@@ -137,12 +143,6 @@
       "Transaction": "Virements",
       "Music": "Musique"
     },
-    "country": {
-      "UnitedStates": "États-Unis",
-      "Russia": "Russie",
-      "Sweden": "Suède",
-      "Kazakhstan": "Kazakhstan"
-    },
     "labels": {
       "amount": "Montant",
       "category": "Catégorie",
@@ -155,7 +155,6 @@
       "countryLabel": "Pays",
       "transactionId": "ID de la transaction",
       "downloadReceipt": "Télécharger le reçu"
-
     }
   },
   "accountsManagement": {

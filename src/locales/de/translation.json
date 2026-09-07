@@ -94,6 +94,12 @@
     "jp": "Japanisch",
     "fr": "Französisch"
   },
+  "country": {
+    "UnitedStates": "Vereinigte Staaten",
+    "Russia": "Russland",
+    "Sweden": "Schweden",
+    "Kazakhstan": "Kasachstan"
+  },
   "transaction": {
     "title": "Transaktion",
     "sellAll": "Alle verkaufen",
@@ -137,12 +143,6 @@
       "Transaction": "Überweisungen",
       "Music": "Musik"
     },
-    "country": {
-      "UnitedStates": "Vereinigte Staaten",
-      "Russia": "Russland",
-      "Sweden": "Schweden",
-      "Kazakhstan": "Kasachstan"
-    },
     "labels": {
       "amount": "Betrag",
       "category": "Kategorie",
@@ -155,7 +155,6 @@
       "countryLabel": "Land",
       "transactionId": "Transaktions-ID",
       "downloadReceipt": "Beleg herunterladen"
-
     }
   },
   "accountsManagement": {

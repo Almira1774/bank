@@ -108,7 +108,7 @@ const TransactionDescription = ({
                 </Box>
                 <Box className={styles.wrapper}>
                     <Typography className={styles.leftSection}>{t(`transactionDetails.labels.countryLabel`)} </Typography>
-                    <Typography className={styles.rightSection}>{t(`transactionDetails.country.${country}`)}</Typography>
+                    <Typography className={styles.rightSection}>{t(`country.${country}`)}</Typography>
                 </Box>
                 <Box className={styles.wrapper}>
                     <Typography className={styles.leftSection}>{t(`transactionDetails.labels.transactionId`)} </Typography>
