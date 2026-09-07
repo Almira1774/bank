@@ -1,5 +1,5 @@
 import type { TransactionStatus } from "@/entities/transaction/model/transactionStatus";
-import { Box, Button, Stack, Typography, Link } from "@mui/material";
+import { Box, Stack, Typography, } from "@mui/material";
 import moneyTransfer from "@/shared/icons/moneyTransfer.svg";
 import {
     formatDate,
