@@ -22,6 +22,7 @@ const TransactionCard = ({ transaction }: { transaction: TransactionDetailsRespo
       />
       <TransactionDescription
         id={transaction.id}
+        type={transaction.type}
         amount={transaction.amount}
         commission={transaction.commission}
         currency={transaction.currency}

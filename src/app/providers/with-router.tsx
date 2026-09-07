@@ -27,8 +27,7 @@ import RequestMoneyPage from "@/pages/request-money/RequestMoneyPage";
 import LanguagePage from "@/pages/language/LanguagePage";
 import ChangePasswordPage from "@/pages/change-password/ChangePasswordPage";
 import TermsPage from "@/pages/terms/ui/TermsPage.tsx";
-import TransactionDetails from "@/pages/transactionDetails/TransactionDetails";
-
+import TransactionDetails from "@/pages/transactionDetails/ui/TransactionDetails";
 import AccountsManagementPage from "@/pages/accounts-management/AccountsManagementPage";
 import CardTransferPage from "@/pages/card-transfer";
 import BankTransferPage from "@/pages/bank-transfer";

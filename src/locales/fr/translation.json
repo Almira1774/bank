@@ -153,7 +153,9 @@
       "authCode": "Code d'autorisation",
       "merchantLocation": "Emplacement du commerçant",
       "countryLabel": "Pays",
-      "transactionId": "ID de la transaction"
+      "transactionId": "ID de la transaction",
+      "downloadReceipt": "Télécharger le reçu"
+
     }
   },
   "accountsManagement": {

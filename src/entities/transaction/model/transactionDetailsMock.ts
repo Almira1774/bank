@@ -1,20 +1,13 @@
 import { TransactionStatus } from "./transactionStatus";
-import { type TransactionResponse } from "./transaction.types";
+import { TransactionDirection } from "./transactionDirection"; 
+import { type TransactionDetailsResponse } from "./transaction.types";
 import appleIcon from "@/shared/icons/apple.svg";
 import spotifyIcon from "@/shared/icons/spotify.svg";
 import moneyTransferIcon from "@/shared/icons/moneyTransfer.svg";
 import cartIcon from "@/shared/icons/cart.svg";
 
-export interface TransactionMockItem extends TransactionResponse {
-    id: string;
-    name: string;
-    icon: string;
-    category: string;
-    commission: number;
-    country: string;
-    merchantLocation: string;
-    authCode: string;
-}
+
+export interface TransactionMockItem extends TransactionDetailsResponse {}
 
 export const transactionDetailsMocks: TransactionMockItem[] = [
     {
@@ -32,7 +25,8 @@ export const transactionDetailsMocks: TransactionMockItem[] = [
         commission: 0,
         country: "UnitedStates",
         merchantLocation: "Apple Store, USA",
-        authCode: "482015"
+        authCode: "482015",
+        type: TransactionDirection.DEBIT 
     },
     {
         id: "2",
@@ -41,7 +35,7 @@ export const transactionDetailsMocks: TransactionMockItem[] = [
         targetAccountId: "acc-7788-****-9900",
         amount: 12.99,
         currency: "USD",
-        status: TransactionStatus.COMPLETED,
+        status: TransactionStatus.PENDING,
         createdAt: "2026-08-31T09:15:00Z",
         description: "Spotify Premium",
         category: "Music",
@@ -49,7 +43,8 @@ export const transactionDetailsMocks: TransactionMockItem[] = [
         commission: 0.15,
         country: "Sweden",
         merchantLocation: "Spotify, SWE",
-        authCode: "109432"
+        authCode: "109432",
+        type: TransactionDirection.DEBIT
     },
     {
         id: "3",
@@ -66,7 +61,8 @@ export const transactionDetailsMocks: TransactionMockItem[] = [
         commission: 0,
         country: "Russia",
         merchantLocation: "P2P, RUS",
-        authCode: "884321"
+        authCode: "884321",
+        type: TransactionDirection.CREDIT 
     },
     {
         id: "4",
@@ -75,7 +71,7 @@ export const transactionDetailsMocks: TransactionMockItem[] = [
         targetAccountId: "acc-5555-****-6666",
         amount: 88.00,
         currency: "USD",
-        status: TransactionStatus.COMPLETED,
+        status: TransactionStatus.PENDING,
         createdAt: "2026-08-28T12:00:00Z",
         description: "Supermarket Purchase",
         category: "Shopping",
@@ -83,7 +79,8 @@ export const transactionDetailsMocks: TransactionMockItem[] = [
         commission: 0,
         country: "Russia",
         merchantLocation: "Grocery Store, RUS",
-        authCode: "302914"
+        authCode: "302914",
+        type: TransactionDirection.DEBIT
     },
     {
         id: "5",
@@ -100,7 +97,8 @@ export const transactionDetailsMocks: TransactionMockItem[] = [
         commission: 0,
         country: "UnitedStates",
         merchantLocation: "Apple Store, USA",
-        authCode: "004312"
+        authCode: "004312",
+        type: TransactionDirection.DEBIT
     },
     {
         id: "6",
@@ -117,9 +115,10 @@ export const transactionDetailsMocks: TransactionMockItem[] = [
         commission: 1.50,
         country: "Russia",
         merchantLocation: "P2P Transfer",
-        authCode: "749301"
+        authCode: "749301",
+        type: TransactionDirection.DEBIT
     },
-  {
+    {
         id: "7",
         name: "Apple Store", 
         sourceAccountId: "acc-9932-****-1122",
@@ -134,7 +133,8 @@ export const transactionDetailsMocks: TransactionMockItem[] = [
         commission: 0,
         country: "UnitedStates",
         merchantLocation: "App Store, USA",
-        authCode: "110492"
+        authCode: "110492",
+        type: TransactionDirection.DEBIT
     },
     {
         id: "8",
@@ -151,6 +151,7 @@ export const transactionDetailsMocks: TransactionMockItem[] = [
         commission: 0.15,
         country: "Sweden",
         merchantLocation: "Spotify, SWE",
-        authCode: "958204"
+        authCode: "958204",
+        type: TransactionDirection.DEBIT
     }
 ];

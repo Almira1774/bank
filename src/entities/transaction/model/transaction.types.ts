@@ -31,7 +31,7 @@ export interface TransactionDetailsResponse extends TransactionResponse {
   country: string;
   merchantLocation: string;
   authCode: string;
-  type:TransactionDirection;
+ type: TransactionDirection; 
 }
 
 export interface CreateTransactionRequest {

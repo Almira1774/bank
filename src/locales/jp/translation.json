@@ -153,7 +153,9 @@
       "authCode": "承認コード",
       "merchantLocation": "加盟店所在地",
       "countryLabel": "国",
-      "transactionId": "取引ID"
+      "transactionId": "取引ID",
+      "downloadReceipt": "レシートをダウンロード"
+
     }
   },
   "accountsManagement": {

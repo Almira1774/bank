@@ -1,5 +1,6 @@
 import type { TransactionStatus } from "@/entities/transaction/model/transactionStatus";
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Button, Stack, Typography, Link } from "@mui/material";
+import moneyTransfer from "@/shared/icons/moneyTransfer.svg";
 import {
     formatDate,
     formatTime,
@@ -14,6 +15,7 @@ import Divider from '@mui/material/Divider';
 import { useTranslation } from "react-i18next";
 import styles from "./TransactionDescription.module.css";
 import type { TransactionDirection } from "@/entities/transaction/model/transactionDirection";
+import { NavLink } from "react-router-dom";
 
 
 type DescriptionProps = {
@@ -58,8 +60,7 @@ const TransactionDescription = ({
             <Box className={styles.transactionWrapper}>
                 <Box className={styles.wrapper}>
                     <Typography className={styles.leftSection}>{t(`transactionDetails.labels.amount`)}</Typography>
-                    <Typography>{statusCreditMap[type]}</Typography>
-                    <Typography>{formattedAmount}</Typography>
+                    <Typography>{statusCreditMap[type]}{formattedAmount}</Typography>
                 </Box>
                 <Box className={styles.wrapper}>
                     <Typography className={styles.leftSection}>{t(`transactionDetails.labels.commission`)}</Typography>
@@ -114,7 +115,17 @@ const TransactionDescription = ({
                     <Typography>{id}</Typography>
                 </Box>
             </Box>
-
+            <NavLink
+                className={styles.link} to={'/*'}>
+                <Box
+                    className={styles.iconLink}
+                    alt="download"
+                    component="img"
+                    src={moneyTransfer}></Box>
+                <Typography className={styles.textLink}>
+                    {t("transactionDetails.labels.downloadReceipt")}
+                </Typography>
+            </NavLink>
         </Stack>
 
     )

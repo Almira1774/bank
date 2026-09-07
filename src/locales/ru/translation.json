@@ -145,7 +145,8 @@
       "authCode": "Код авторизации",
       "merchantLocation": "Место проведения",
       "countryLabel": "Страна",
-      "transactionId": "id Транзакции"
+      "transactionId": "id Транзакции",
+      "downloadReceipt": "Скачать чек"
     }
   },
   "search": {

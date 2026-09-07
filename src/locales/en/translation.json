@@ -162,7 +162,8 @@
       "authCode": "Authorization Code",
       "merchantLocation": "Merchant Location",
       "countryLabel": "Country",
-      "transactionId": "Transaction id"
+      "transactionId": "Transaction id",
+      "downloadReceipt": "Download receipt"
     }
   },
   "accounts": {
