@@ -97,10 +97,28 @@
     "jp": "Japanese",
     "fr": "French"
   },
+  "country": {
+    "UnitedStates": "United States",
+    "Russia": "Russia",
+    "Sweden": "Sweden",
+    "Kazakhstan": "Kazakhstan"
+  },
   "transaction": {
     "title": "Transaction",
     "sellAll": "Sell All",
     "empty": "Transaction field is empty"
+  },
+  "transactionItem": {
+    "name": {
+      "Money Transfer": "Money Transfer",
+      "Grocery": "Grocery"
+    },
+    "category": {
+      "Entertainment": "Entertainment",
+      "Music": "Music",
+      "Shopping": "Shopping",
+      "Transaction": "Transaction"
+    }
   },
   "transaction-table": {
     "recepient": "Recepient",
@@ -108,12 +126,45 @@
     "type": "Type",
     "amount": "The amount"
   },
-
   "transactionHistory": {
     "title": "Transaction History",
     "seeAll": "See All",
     "today": "Today",
     "empty": "Transaction field is empty"
+  },
+  "transactionLatest": {
+    "title": "Latest transactions",
+    "seeAll": "See All",
+    "loading": "Loading...",
+    "errorMessage": "Loading error",
+    "empty": "Transaction field is empty"
+  },
+  "transactionDetails": {
+    "title": "Transaction Details",
+    "status": {
+      "COMPLETED": "Success",
+      "FAILED": "Declined",
+      "PENDING": "Pending"
+    },
+    "category": {
+      "Entertainment": "Entertainment",
+      "Shopping": "Shopping",
+      "Transaction": "Transfers",
+      "Music": "Music"
+    },
+    "labels": {
+      "amount": "Amount",
+      "category": "Category",
+      "status": "Status",
+      "dateTime": "Date & Time",
+      "sourceAccount": "Source Account",
+      "commission": "Fee",
+      "authCode": "Authorization Code",
+      "merchantLocation": "Merchant Location",
+      "countryLabel": "Country",
+      "transactionId": "Transaction id",
+      "downloadReceipt": "Download receipt"
+    }
   },
   "accounts": {
     "loadError": "Failed to load accounts",
@@ -276,24 +327,5 @@
   "common": {
     "loading": "Loading...",
     "retry": "Retry"
-  },
-  "cardSettings": {
-    "title": "Card Settings",
-    "cardManagement": {
-      "primary": "Card Management",
-      "secondary": "Card blocking, reissue and more"
-    },
-    "changePIN": {
-      "primary": "Change PIN",
-      "secondary": "Set a new PIN for your card"
-    },
-    "security": {
-      "primary": "Security",
-      "secondary": "3D Secure, confirmations and limits"
-    },
-    "notifications": {
-      "primary": "Notifications",
-      "secondary": "SMS and push notifications for your card"
-    }
   }
 }

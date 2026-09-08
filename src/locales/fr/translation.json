@@ -94,10 +94,28 @@
     "jp": "Japonais",
     "fr": "Français"
   },
+  "country": {
+    "UnitedStates": "États-Unis",
+    "Russia": "Russie",
+    "Sweden": "Suède",
+    "Kazakhstan": "Kazakhstan"
+  },
   "transaction": {
     "title": "Transaction",
     "sellAll": "Tout vendre",
     "empty": "Aucune transaction"
+  },
+  "transactionItem": {
+    "name": {
+      "Money Transfer": "Virement bancaire",
+      "Grocery": "Courses"
+    },
+    "category": {
+      "Entertainment": "Divertissement",
+      "Music": "Musique",
+      "Shopping": "Courses",
+      "Transaction": "Transaction"
+    }
   },
   "transaction-table": {
     "recepient": "Destinataire",
@@ -105,7 +123,40 @@
     "type": "Type",
     "amount": "Montant"
   },
-
+  "transactionLatest": {
+    "title": "Dernières transactions",
+    "seeAll": "Voir tout",
+    "loading": "Chargement...",
+    "empty": "Le champ de transaction est vide",
+    "errorMessage": "Erreur de chargement"
+  },
+  "transactionDetails": {
+    "title": "Détails de la transaction",
+    "status": {
+      "COMPLETED": "Réussi",
+      "FAILED": "Refusé",
+      "PENDING": "En attente"
+    },
+    "category": {
+      "Entertainment": "Divertissement",
+      "Shopping": "Achats",
+      "Transaction": "Virements",
+      "Music": "Musique"
+    },
+    "labels": {
+      "amount": "Montant",
+      "category": "Catégorie",
+      "status": "Statut",
+      "dateTime": "Date et heure",
+      "sourceAccount": "Compte de débit",
+      "commission": "Frais",
+      "authCode": "Code d'autorisation",
+      "merchantLocation": "Emplacement du commerçant",
+      "countryLabel": "Pays",
+      "transactionId": "ID de la transaction",
+      "downloadReceipt": "Télécharger le reçu"
+    }
+  },
   "accountsManagement": {
     "title": "Gestion des comptes",
     "createAccount": "Créer un compte",
@@ -122,7 +173,6 @@
     "statusBlocked": "Bloqué",
     "load": "Télécharger",
     "accountCreated": "Compte créé avec succès!",
-
     "terms": {
       "title": "Conditions générales",
       "firstRule": "L15.1 Merci de visiter notre application Doctor 24×7 et de vous être inscrit en tant que membre.",
@@ -227,24 +277,5 @@
   "common": {
     "loading": "Chargement...",
     "retry": "Réessayer"
-  },
-  "cardSettings": {
-    "title": "Paramètres de la carte",
-    "cardManagement": {
-      "primary": "Gestion de la carte",
-      "secondary": "Blocage, réémission de la carte et plus"
-    },
-    "changePIN": {
-      "primary": "Modifier le code PIN",
-      "secondary": "Définissez un nouveau code PIN pour votre carte"
-    },
-    "security": {
-      "primary": "Sécurité",
-      "secondary": "3D Secure, confirmations et limites"
-    },
-    "notifications": {
-      "primary": "Notifications",
-      "secondary": "Notifications SMS et push pour votre carte"
-    }
   }
 }

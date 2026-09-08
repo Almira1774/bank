@@ -9,13 +9,7 @@ const NotificationsTabs = () => {
 
   return (
     <Box className={style.box}>
-      <Stack
-        spacing={2}
-        direction="row"
-        useFlexGap
-        sx={{ flexWrap: "wrap" }}
-        className={style.textChip}
-      >
+      <Stack spacing={2} direction="row" useFlexGap sx={{ flexWrap: "wrap" }}>
         {notificationTabs.map((tab) => (
           <Chip
             key={tab}

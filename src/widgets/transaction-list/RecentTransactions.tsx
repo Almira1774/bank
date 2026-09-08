@@ -82,6 +82,7 @@ export const RecentTransactions = ({ limit = 3 }: RecentTransactionsProps) => {
 
       {transactions.map((transaction) => (
         <TransactionItem
+          onClick={() => navigate(AppRoutes.TRANSACTION_DETAILS)}
           key={transaction.id}
           icon={transaction.icon}
           name={transaction.name}

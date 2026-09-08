@@ -1,6 +1,5 @@
 import { Box, Button, List, ListSubheader } from "@mui/material";
 import KeyboardDoubleArrowDownRoundedIcon from "@mui/icons-material/KeyboardDoubleArrowDownRounded";
-import styles from "./NotificationsList.module.css"
 
 import NotificationItem from "../notification-item/NotificationItem";
 import { useFilter } from "../../shared/hooks/useFilter";
@@ -15,7 +14,7 @@ const NotificationsList = () => {
   ];
 
   return (
-    <List className={styles.section}>
+    <List>
       {sections.map(
         ({ label, items }) =>
           items.length > 0 && (

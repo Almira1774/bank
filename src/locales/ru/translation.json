@@ -57,21 +57,7 @@
     "joined": "Присоединился {{date}}",
     "cancel": "Отмена",
     "saveChanges": "Сохранить изменения",
-    "edit": "Редактировать",
-    "months": [
-      "Января",
-      "Февраля",
-      "Марта",
-      "Апреля",
-      "Мая",
-      "Июня",
-      "Июля",
-      "Августа",
-      "Сентября",
-      "Октября",
-      "Ноября",
-      "Декабря"
-    ]
+    "edit": "Редактировать"
   },
   "statistics": {
     "title": "Статистика"
@@ -94,10 +80,28 @@
     "jp": "Японский",
     "fr": "Французский"
   },
+  "country": {
+    "UnitedStates": "Соединённые Штаты",
+    "Russia": "Россия",
+    "Sweden": "Швеция",
+    "Kazakhstan": "Казахстан"
+  },
   "transaction": {
     "title": "Транзакции",
     "sellAll": "Продать всё",
     "empty": "Список транзакций пуст"
+  },
+  "transactionItem": {
+    "name": {
+      "Money Transfer": "Денежный перевод",
+      "Grocery": "Продукты"
+    },
+    "category": {
+      "Entertainment": "Развлечения",
+      "Music": "Музыка",
+      "Shopping": "Покупки",
+      "Transaction": "Переводы"
+    }
   },
   "transaction-table": {
     "recepient": "Получатель",
@@ -111,12 +115,42 @@
     "today": "Сегодня",
     "empty": "Поле транзакций пусто"
   },
+  "transactionLatest": {
+    "title": "Последние операции",
+    "seeAll": "Показать все",
+    "loading": "Загрузка...",
+    "errorMessage": "Ошибка загрузки",
+    "empty": "Список операций пуст"
+  },
+  "transactionDetails": {
+    "title": "Детали операции",
+    "status": {
+      "COMPLETED": "Успешно",
+      "FAILED": "Отклонено",
+      "PENDING": "В обработке"
+    },
+    "category": {
+      "Entertainment": "Развлечения",
+      "Shopping": "Покупки",
+      "Transaction": "Переводы",
+      "Music": "Музыка"
+    },
+    "labels": {
+      "amount": "Сумма",
+      "dateTime": "Дата и время",
+      "category": "Категория",
+      "status": "Статус",
+      "sourceAccount": "Счёт списания",
+      "commission": "Комиссия",
+      "authCode": "Код авторизации",
+      "merchantLocation": "Место проведения",
+      "countryLabel": "Страна",
+      "transactionId": "id Транзакции",
+      "downloadReceipt": "Скачать чек"
+    }
+  },
   "search": {
     "title": "Поиск"
-  },
-  "accounts": {
-    "loadError": "Не удалось загрузить счета",
-    "empty": "У вас пока нет счетов"
   },
   "accountsManagement": {
     "title": "Управление счетами",
@@ -134,7 +168,6 @@
     "statusBlocked": "Заблокирован",
     "load": "Загрузить",
     "accountCreated": "Счет успешно создан!",
-
     "terms": {
       "title": "Условия и положения",
       "firstRule": "L15.1 Благодарим вас за посещение нашего приложения Doctor 24×7 и регистрацию в качестве участника.",
@@ -195,23 +228,6 @@
     "changeCurrency": "Изменить валюту?",
     "sendMoney": "Отправить деньги"
   },
-  "transferBetweenAccounts": {
-    "title": "Между своими счетами",
-    "history": "История переводов",
-    "source": "Откуда",
-    "available": "Доступно",
-    "swapAccounts": "Поменять счета местами",
-    "destination": "Куда",
-    "afterTransfer": "После перевода",
-    "exchangeRate": "Курс обмена",
-    "updated": "Обновлено 15 секунд назад",
-    "commission": "Комиссия",
-    "free": "Бесплатно",
-    "recipientGets": "Получатель получит",
-    "processingTime": "Срок зачисления",
-    "instantly": "Моментально",
-    "transferButton": "Перевести деньги"
-  },
   "cardTransfer": {
     "title": "На карту",
     "fromCard": "С карты",
@@ -258,7 +274,6 @@
     "jpy": "Японская иена",
     "cny": "Китайский юань"
   },
-
   "home": {
     "title": "Главная"
   },
@@ -273,24 +288,5 @@
   },
   "notifications": {
     "title": "Уведомления"
-  },
-  "cardSettings": {
-    "title": "Настройки карты",
-    "cardManagement": {
-      "primary": "Управление картой",
-      "secondary": "Блокировка карты, перевыпуск и другое"
-    },
-    "changePIN": {
-      "primary": "Изменение PIN-кода",
-      "secondary": "Установите новый PIN-код для карты"
-    },
-    "security": {
-      "primary": "Безопасность",
-      "secondary": "3D Secure, подтверждения и ограничения"
-    },
-    "notifications": {
-      "primary": "Уведомления",
-      "secondary": "СМС и push-уведомления по карте"
-    }
   }
 }

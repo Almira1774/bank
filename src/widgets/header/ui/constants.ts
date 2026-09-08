@@ -28,6 +28,10 @@ export const headerConfig: Record<
     titleKey: "transactionHistory.title",
     rightIcon: historyIcon,
   },
+  "/transaction-history/:id": {
+    titleKey: "transactionDetails.title",
+    rightIcon: historyIcon,
+  },
   "/profile": {
     titleKey: "profile.title",
     rightIcon: editUserIcon,

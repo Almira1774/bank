@@ -18,7 +18,7 @@ import AddRoundedIcon from "@mui/icons-material/AddRounded";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { AppRoutes } from "@/shared/config/routes";
-import CardSettings from "@/widgets/CardSettings/CardSettings.tsx";
+import { TransactionLatest } from "@/widgets/transaction-latest";
 
 const MyCardsPage = () => {
   const { t } = useTranslation();
@@ -63,15 +63,14 @@ const MyCardsPage = () => {
               className={styles.addCardButton}
               onClick={handleAddCard}
             >
-              <AddRoundedIcon aria-hidden="true" />
+              <AddRoundedIcon aria-hidden="false" />
 
               <span>{t("addNewCard.addButton")}</span>
             </button>
           </Box>
-
+          <TransactionLatest />
           <RecentTransactions limit={3} />
           <MonthlyLimit />
-          <CardSettings/>
           <BottomNavigation />
         </div>
       </Box>

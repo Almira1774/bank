@@ -94,10 +94,28 @@
     "jp": "Japanisch",
     "fr": "Französisch"
   },
+  "country": {
+    "UnitedStates": "Vereinigte Staaten",
+    "Russia": "Russland",
+    "Sweden": "Schweden",
+    "Kazakhstan": "Kasachstan"
+  },
   "transaction": {
     "title": "Transaktion",
     "sellAll": "Alle verkaufen",
     "empty": "Transaktionsfeld ist leer"
+  },
+  "transactionItem": {
+    "name": {
+      "Money Transfer": "Geldüberweisung",
+      "Grocery": "Lebensmittel"
+    },
+    "category": {
+      "Entertainment": "Unterhaltung",
+      "Music": "Musik",
+      "Shopping": "Einkauf",
+      "Transaction": "Transaktion"
+    }
   },
   "transaction-table": {
     "recepient": "Empfänger",
@@ -105,7 +123,40 @@
     "type": "Typ",
     "amount": "Summe"
   },
-
+  "transactionLatest": {
+    "title": "Letzte Transaktionen",
+    "seeAll": "Alle anzeigen",
+    "loading": "Laden...",
+    "empty": "Die Transaktionsliste ist leer",
+    "errorMessage": "Ladefehler"
+  },
+  "transactionDetails": {
+    "title": "Transaktionsdetails",
+    "status": {
+      "COMPLETED": "Erfolgreich",
+      "FAILED": "Abgelehnt",
+      "PENDING": "In Bearbeitung"
+    },
+    "category": {
+      "Entertainment": "Unterhaltung",
+      "Shopping": "Einkaufen",
+      "Transaction": "Überweisungen",
+      "Music": "Musik"
+    },
+    "labels": {
+      "amount": "Betrag",
+      "category": "Kategorie",
+      "status": "Status",
+      "dateTime": "Datum & Uhrzeit",
+      "sourceAccount": "Belastungskonto",
+      "commission": "Gebühr",
+      "authCode": "Autorisierungscode",
+      "merchantLocation": "Händlerstandort",
+      "countryLabel": "Land",
+      "transactionId": "Transaktions-ID",
+      "downloadReceipt": "Beleg herunterladen"
+    }
+  },
   "accountsManagement": {
     "title": "Kontoverwaltung",
     "createAccount": "Konto erstellen",
@@ -122,7 +173,6 @@
     "statusBlocked": "Gesperrt",
     "load": "Hochladen",
     "accountCreated": "Konto erfolgreich erstellt!",
-
     "terms": {
       "title": "Allgemeine Geschäftsbedingungen",
       "firstRule": "L15.1 Vielen Dank für Ihren Besuch unserer Anwendung Doctor 24×7 und für Ihre Registrierung als Mitglied.",
@@ -227,24 +277,5 @@
   "common": {
     "loading": "Laden...",
     "retry": "Wiederholen"
-  },
-  "cardSettings": {
-    "title": "Karteneinstellungen",
-    "cardManagement": {
-      "primary": "Kartenverwaltung",
-      "secondary": "Kartensperrung, Neuausstellung und mehr"
-    },
-    "changePIN": {
-      "primary": "PIN ändern",
-      "secondary": "Legen Sie eine neue PIN für Ihre Karte fest"
-    },
-    "security": {
-      "primary": "Sicherheit",
-      "secondary": "3D Secure, Bestätigungen und Limits"
-    },
-    "notifications": {
-      "primary": "Benachrichtigungen",
-      "secondary": "SMS- und Push-Benachrichtigungen für Ihre Karte"
-    }
   }
 }

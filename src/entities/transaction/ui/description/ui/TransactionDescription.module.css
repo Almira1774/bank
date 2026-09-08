@@ -1,0 +1,92 @@
+.descriptionContainer {
+    margin-top: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: var(--color-item-bg);
+}
+
+.transactionWrapper {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.divider {
+    background-color: var(--color-divider);
+}
+
+.leftSection {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.rightSection {
+    text-align: end;
+}
+
+
+.date {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    gap: 5px;
+}
+
+.statusContainer {
+    display: flex;
+    align-items: center;
+}
+
+.statusIcon.statusIcon {
+    font-size: 18px;
+    margin-left: auto;
+}
+
+
+.statusCompleted {
+    color: rgba(31, 170, 71, 1);
+}
+
+.statusFailed {
+    color: rgba(225, 99, 100, 1);
+}
+
+.statusPending {
+    color: rgba(247, 159, 26, 1);
+}
+
+.link {
+    display: flex;
+    padding: 8px 16px;
+    gap: 5px;
+    justify-content: center;
+    text-decoration: none;
+    border: 1px solid var(--color-divider);
+    border-radius: 6px;
+    margin-top: 20px;
+
+}
+
+.textLink.textLink {
+    color: #1976d2;
+}
+
+.iconLink {
+    font-size: 18px;
+    object-fit: contain;
+
+    /* перекрасим иконку */
+    filter: invert(36%) sepia(84%) saturate(1637%) hue-rotate(196deg) brightness(91%) contrast(89%);
+}

@@ -27,7 +27,7 @@ import RequestMoneyPage from "@/pages/request-money/RequestMoneyPage";
 import LanguagePage from "@/pages/language/LanguagePage";
 import ChangePasswordPage from "@/pages/change-password/ChangePasswordPage";
 import TermsPage from "@/pages/terms/ui/TermsPage.tsx";
-
+import TransactionDetails from "@/pages/transactionDetails/ui/TransactionDetails";
 import AccountsManagementPage from "@/pages/accounts-management/AccountsManagementPage";
 import CardTransferPage from "@/pages/card-transfer";
 import BankTransferPage from "@/pages/bank-transfer";
@@ -72,7 +72,10 @@ const router = createBrowserRouter([
         <MainLayout hideNavOnMobile />
       </ProtectedRoute>
     ),
-    children: [{ path: AppRoutes.REQUEST_MONEY, element: <RequestMoneyPage /> }],
+    children: [
+      { path: AppRoutes.REQUEST_MONEY, element: <RequestMoneyPage /> },
+      { path: AppRoutes.TRANSACTION_DETAILS, element: <TransactionDetails /> },
+    ],
   },
 
   //  только Header
@@ -83,7 +86,11 @@ const router = createBrowserRouter([
       </ProtectedRoute>
     ),
     children: [
-      { path: AppRoutes.TRANSACTION_HISTORY, element: <TransactionHistoryPage /> },
+      {
+        path: AppRoutes.TRANSACTION_HISTORY,
+        element: <TransactionHistoryPage />,
+      },
+      { path: AppRoutes.TRANSACTION_DETAILS, element: <TransactionDetails /> },
       { path: AppRoutes.EDIT_PROFILE, element: <EditProfilePage /> },
       { path: AppRoutes.PROFILE, element: <ProfilePage /> },
       { path: AppRoutes.ADD_NEW_CARD, element: <AddNewCardPage /> },

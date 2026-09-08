@@ -10,6 +10,7 @@ export enum AppRoutes {
   MY_CARDS = "/my-cards",
   SETTINGS = "/settings",
   TRANSACTION_HISTORY = "/transaction-history",
+  TRANSACTION_DETAILS = "/transaction-history/:id",
 
   // Приватные (только Header)
   PROFILE = "/profile",
