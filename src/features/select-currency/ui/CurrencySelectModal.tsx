@@ -16,7 +16,6 @@ import ArrowBackIosNewRoundedIcon from "@mui/icons-material/ArrowBackIosNewRound
 import SearchIcon from "@mui/icons-material/Search";
 import CheckCircleRoundedIcon from "@mui/icons-material/CheckCircleRounded";
 import { useTranslation } from "react-i18next";
-
 import { currencies } from "@/entities/currency";
 import type { CurrencyCode } from "@/entities/currency";
 import styles from "./CurrencySelectModal.module.css";
