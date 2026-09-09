@@ -1,5 +1,9 @@
 import { useState } from "react";
 
+const SIMULATION_DELAY_MS = 1500;
+
+const validatePin = (pin: string) => /^\d{4}$/.test(pin);
+
 export const useChangePin = () => {
   const [currentPin, setCurrentPin] = useState("");
   const [newPin, setNewPin] = useState("");
@@ -8,7 +12,6 @@ export const useChangePin = () => {
   const [success, setSuccess] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  const validatePin = (pin: string) => /^\d{4}$/.test(pin);
 
   const handleSubmit = async () => {
     setError(null);
@@ -37,7 +40,7 @@ export const useChangePin = () => {
     setIsLoading(true);
     try {
       // Имитация запроса
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      await new Promise((resolve) => setTimeout(resolve, SIMULATION_DELAY_MS));
       setSuccess("PIN-код успешно изменён!");
       setCurrentPin("");
       setNewPin("");

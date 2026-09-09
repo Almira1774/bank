@@ -147,26 +147,26 @@
 }
 
 .button:disabled {
-  background-color: #b0b0b0;
+  background-color: var(--color-disabled, #b0b0b0);
   cursor: not-allowed;
 }
 
 .successMessage {
-  background-color: #e6f7e6;
-  border: 1px solid #4caf50;
+  background-color: var(--color-success-bg, #e6f7e6);
+  border: 1px solid var(--color-success, #4caf50);
   border-radius: 8px;
   padding: 12px;
   margin-bottom: 16px;
-  color: #2e7d32;
+  color: var(--color-success-text, #2e7d32);
 }
 
 .errorMessage {
-  background-color: #ffe6e6;
-  border: 1px solid #ff4d4d;
+  background-color: var(--color-error-bg, #ffe6e6);
+  border: 1px solid var(--color-error, #ff4d4d);
   border-radius: 8px;
   padding: 12px;
   margin-bottom: 16px;
-  color: #cc0000;
+  color: var(--color-error-text, #cc0000);
 }
 
 .container .labelText {
