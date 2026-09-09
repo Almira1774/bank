@@ -245,6 +245,15 @@
     "loading": "Laden...",
     "retry": "Wiederholen"
   },
+  "infoCard": {
+    "title": "Informationen zur Karte",
+    "showDetails": "Details anzeigen",
+    "noShowDetails": "Details ausblenden",
+    "typeCard": "Kartentyp",
+    "currency": "Währung",
+    "status": "Status",
+    "available": "Verfügbar",
+    "ownFunds": "Eigene Mittel"
   "cardSettings": {
     "title": "Karteneinstellungen",
     "cardManagement": {
