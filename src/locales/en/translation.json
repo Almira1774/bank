@@ -304,6 +304,7 @@
     "status": "Status",
     "available": "Available",
     "ownFunds": "Own funds"
+  },
   "cardSettings": {
     "title": "Card Settings",
     "cardManagement": {
