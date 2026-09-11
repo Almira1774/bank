@@ -254,6 +254,7 @@
     "status": "Status",
     "available": "Verfügbar",
     "ownFunds": "Eigene Mittel"
+  },
   "cardSettings": {
     "title": "Karteneinstellungen",
     "cardManagement": {

@@ -300,6 +300,7 @@
     "status": "Статус",
     "available": "Доступно",
     "ownFunds": "Собственные средства"
+  },
   "cardSettings": {
     "title": "Настройки карты",
     "cardManagement": {
