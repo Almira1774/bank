@@ -1,11 +1,14 @@
 import { baseApi } from "@/shared/api/baseApi";
 import { API_ENDPOINTS } from "@/shared/config/endpoints";
-import type {
-  Account,
-  CreateAccountRequest,
-  BalanceResponse,
-  GetMyAccountsQueryParams,
-  PaginatedResponse,
+import {
+  type Account,
+  type CreateAccountRequest,
+  type BalanceResponse,
+  type GetMyAccountsQueryParams,
+  type PaginatedResponse,
+  type DebitRequest,
+  type CreditRequest,
+  type CompensateRequest,
 } from "../model/types";
 
 export const accountApi = baseApi.injectEndpoints({
@@ -34,9 +37,9 @@ export const accountApi = baseApi.injectEndpoints({
       providesTags: (result) =>
         result
           ? [
-              ...result.content.map(({ id }) => ({ type: "Account" as const, id })),
-              { type: "Account", id: "LIST" },
-            ]
+            ...result.content.map(({ id }) => ({ type: "Account" as const, id })),
+            { type: "Account", id: "LIST" },
+          ]
           : [{ type: "Account", id: "LIST" }],
     }),
     getAccountById: build.query<Account, string>({
@@ -65,6 +68,33 @@ export const accountApi = baseApi.injectEndpoints({
       }),
       invalidatesTags: (result, error, { id }) => [{ type: "Account", id }],
     }),
+
+    debit: build.mutation<DebitRequest, string>({
+      query: (body) => ({
+        url: API_ENDPOINTS.ACCOUNT.DEBIT,
+        method: "POST",
+        body,
+      }),
+      invalidatesTags: (result, error, id) => [{ type: "Account", id }, { type: "Balance", id }]
+    }),
+
+    credit: build.mutation<CreditRequest, string>({
+      query: (body) => ({
+        url: API_ENDPOINTS.ACCOUNT.CREDIT,
+        method: "POST",
+        body,
+      }),
+      invalidatesTags: (result, error, id) => [{ type: "Account", id }, { type: "Balance", id }]
+    }),
+
+    compensate: build.mutation<CompensateRequest, string>({
+      query: (body) => ({
+        url: API_ENDPOINTS.ACCOUNT.COMPENSATE,
+        method: "POST",
+        body,
+      }),
+      invalidatesTags: (result, error, id) => [{ type: "Account", id }, { type: "Balance", id }]
+    }),
   }),
 });
 
@@ -74,4 +104,7 @@ export const {
   useGetBalanceQuery,
   useCreateAccountMutation,
   useBlockAccountMutation,
+  useDebitMutation,
+  useCreditMutation,
+  useCompensateMutation
 } = accountApi;

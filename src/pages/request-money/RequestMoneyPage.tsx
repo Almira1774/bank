@@ -38,11 +38,11 @@ const RequestMoneyPage = () => {
 
   const initialData = user
     ? {
-        fullName: user.fullName || "",
-        email: user.email || "",
-        description: user.fullName || "",
-        monthlyDueBy: [],
-      }
+      fullName: user.fullName || "",
+      email: user.email || "",
+      description: user.fullName || "",
+      monthlyDueBy: [],
+    }
     : undefined;
 
   return (
