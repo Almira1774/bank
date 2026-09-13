@@ -254,6 +254,7 @@
     "status": "ステータス",
     "available": "利用可能額",
     "ownFunds": "自己資金"
+  },
   "cardSettings": {
     "title": "カード設定",
     "cardManagement": {

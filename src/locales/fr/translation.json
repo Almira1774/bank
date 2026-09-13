@@ -254,6 +254,7 @@
     "status": "Statut",
     "available": "Disponible",
     "ownFunds": "Fonds propres"
+  },
   "cardSettings": {
     "title": "Paramètres de la carte",
     "cardManagement": {

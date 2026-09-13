@@ -69,31 +69,31 @@ export const accountApi = baseApi.injectEndpoints({
       invalidatesTags: (result, error, { id }) => [{ type: "Account", id }],
     }),
 
-    debit: build.mutation<DebitRequest, string>({
+    debit: build.mutation<void, DebitRequest>({
       query: (body) => ({
         url: API_ENDPOINTS.ACCOUNT.DEBIT,
         method: "POST",
         body,
       }),
-      invalidatesTags: (result, error, id) => [{ type: "Account", id }, { type: "Balance", id }]
+      invalidatesTags: [{ type: "Account", id: "List" }, { type: "Balance", id: "List" }]
     }),
 
-    credit: build.mutation<CreditRequest, string>({
+    credit: build.mutation<void, CreditRequest>({
       query: (body) => ({
         url: API_ENDPOINTS.ACCOUNT.CREDIT,
         method: "POST",
         body,
       }),
-      invalidatesTags: (result, error, id) => [{ type: "Account", id }, { type: "Balance", id }]
+      invalidatesTags: [{ type: "Account", id: "List" }, { type: "Balance", id: "List" }]
     }),
 
-    compensate: build.mutation<CompensateRequest, string>({
+    compensate: build.mutation<void, CompensateRequest>({
       query: (body) => ({
         url: API_ENDPOINTS.ACCOUNT.COMPENSATE,
         method: "POST",
         body,
       }),
-      invalidatesTags: (result, error, id) => [{ type: "Account", id }, { type: "Balance", id }]
+      invalidatesTags: [{ type: "Account", id: "List" }, { type: "Balance", id: "List" }]
     }),
   }),
 });

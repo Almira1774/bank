@@ -10,9 +10,11 @@ import {
   validateName,
   validateRequired,
 } from "@/shared/ui/Input/validators.ts";
+import { paymentDetails } from "../model/mocks";
 import { DateInput } from "@/shared/ui/Input/presets/DateInput.tsx";
 import { emailRegex } from "@/shared/lib/validation/rules.ts";
 import { Box } from "@mui/material";
+import { useDebitMutation } from "@/entities/account/api/account-api";
 
 export interface RequestMoneyData {
   amount: string;
@@ -23,7 +25,6 @@ export interface RequestMoneyData {
 }
 
 interface RequestMoneyFormProps {
-  onSubmit: (data: RequestMoneyData) => void;
   isLoading?: boolean;
   initialData?: {
     fullName: string;
@@ -34,12 +35,10 @@ interface RequestMoneyFormProps {
 }
 
 export const RequestMoneyForm = ({
-  onSubmit,
-  isLoading = false,
   initialData,
 }: RequestMoneyFormProps) => {
   const { t } = useTranslation();
-
+  const [requestMoneyAction, { isLoading }] = useDebitMutation();
   const [payerName, setPayerName] = useState<string>(initialData?.fullName || "");
   const [email, setEmail] = useState<string>(initialData?.email || "");
   const [description, setDescription] = useState<string>(initialData?.description || "");
@@ -71,6 +70,7 @@ export const RequestMoneyForm = ({
     isAmountValid;
 
   const handleSubmit = (e: React.SyntheticEvent<HTMLFormElement>) => {
+
     e.preventDefault();
     setFormError("");
 
@@ -78,13 +78,14 @@ export const RequestMoneyForm = ({
       setFormError(t("requestMoney.fillAllFields"));
       return;
     }
+    const idempotencyKey = crypto.randomUUID();
 
-    onSubmit({
-      amount,
-      payerName,
-      email,
-      description,
-      monthlyDueBy,
+    requestMoneyAction({
+      sourceAccountId: paymentDetails.sourceAccountId,
+      targetAccountId: paymentDetails.targetAccountId,
+      amount: Number(amount),
+      currency: paymentDetails.currency,
+      idempotencyKey: idempotencyKey,
     });
   };
 
