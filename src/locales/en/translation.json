@@ -203,7 +203,9 @@
     "monthlyDueBy": "Monthly due by",
     "enterAmount": "Enter Your Amount",
     "changeCurrency": "Change Currency?",
-    "sendMoney": "Send Money"
+    "sendMoney": "Send Money",
+    "fillAllFields": "Please fill in all required fields",
+    "requestError": "Failed to send data"
   },
   "sendMoney": {
     "sendTo": "Send to",

@@ -190,7 +190,9 @@
     "monthlyDueBy": "À rembourser avant le",
     "enterAmount": "Entrez le montant",
     "changeCurrency": "Changer de devise ?",
-    "sendMoney": "Envoyer la demande"
+    "sendMoney": "Envoyer la demande",
+    "fillAllFields": "Veuillez remplir tous les champs obligatoires",
+    "requestError": "Échec de l'envoi des données"
   },
   "bankTransfer": {
     "title": "Vers le compte",

@@ -203,7 +203,9 @@
     "monthlyDueBy": "Срок возврата до",
     "enterAmount": "Введите сумму",
     "changeCurrency": "Сменить валюту?",
-    "sendMoney": "Отправить запрос"
+    "sendMoney": "Отправить запрос",
+    "fillAllFields": "Пожалуйста, заполните все обязательные поля",
+    "requestError": "Ошибка отправки данных"
   },
   "sendMoney": {
     "title": "Отправить деньги",

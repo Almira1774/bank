@@ -190,7 +190,8 @@
     "monthlyDueBy": "Monatlich fällig bis",
     "enterAmount": "Betrag eingeben",
     "changeCurrency": "Währung wechseln?",
-    "sendMoney": "Anfrage senden"
+    "sendMoney": "Anfrage senden",
+    "requestError": "Fehler beim Senden der Daten"
   },
   "bankTransfer": {
     "title": "Auf Konto",

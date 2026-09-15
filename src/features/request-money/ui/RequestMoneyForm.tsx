@@ -25,7 +25,6 @@ export interface RequestMoneyData {
 }
 
 interface RequestMoneyFormProps {
-  isLoading?: boolean;
   initialData?: {
     fullName: string;
     email: string;
@@ -37,8 +36,9 @@ interface RequestMoneyFormProps {
 export const RequestMoneyForm = ({
   initialData,
 }: RequestMoneyFormProps) => {
+
   const { t } = useTranslation();
-  const [requestMoneyAction, { isLoading }] = useDebitMutation();
+  const [requestMoneyAction, { isLoading, }] = useDebitMutation();
   const [payerName, setPayerName] = useState<string>(initialData?.fullName || "");
   const [email, setEmail] = useState<string>(initialData?.email || "");
   const [description, setDescription] = useState<string>(initialData?.description || "");
@@ -69,25 +69,42 @@ export const RequestMoneyForm = ({
     isMonthlyDueByValid &&
     isAmountValid;
 
-  const handleSubmit = (e: React.SyntheticEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
 
     e.preventDefault();
     setFormError("");
 
     if (!isFormValid) {
-      setFormError(t("requestMoney.fillAllFields"));
+      setFormError(t(`requestMoney.fillAllFields`));
       return;
     }
-    const idempotencyKey = crypto.randomUUID();
+    try {
+      const idempotencyKey = crypto.randomUUID();
 
-    requestMoneyAction({
-      sourceAccountId: paymentDetails.sourceAccountId,
-      targetAccountId: paymentDetails.targetAccountId,
-      amount: Number(amount),
-      currency: paymentDetails.currency,
-      idempotencyKey: idempotencyKey,
-    });
+      await requestMoneyAction({
+        sourceAccountId: paymentDetails.sourceAccountId,
+        targetAccountId: paymentDetails.targetAccountId,
+        amount: Number(amount),
+        currency: paymentDetails.currency,
+        idempotencyKey: idempotencyKey,
+      }).unwrap();
+
+      setFormError("");
+      setAmount("");
+      setDay("");
+      setDescription("");
+      setEmail("");
+      setMonth("");
+      setPayerName("");
+      setYear("");
+    }
+
+    catch {
+      setFormError(t(`requestMoney.requestError`))
+    }
+
   };
+
 
   return (
     <form className={styles.form} onSubmit={handleSubmit}>

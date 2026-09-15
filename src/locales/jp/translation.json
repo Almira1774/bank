@@ -190,7 +190,9 @@
     "monthlyDueBy": "毎月の返済期限",
     "enterAmount": "金額を入力",
     "changeCurrency": "通貨を変更",
-    "sendMoney": "送信"
+    "sendMoney": "送信",
+    "fillAllFields": "すべての必須項目を入力してください",
+    "requestError": "データの送信に失敗しました"
   },
   "bankTransfer": {
     "title": "口座へ",
