@@ -230,7 +230,8 @@
     "recipientGets": "Получатель получит",
     "processingTime": "Срок зачисления",
     "instantly": "Моментально",
-    "transferButton": "Перевести деньги"
+    "transferButton": "Перевести деньги",
+    "requestError": "Ошибка отправки данных"
   },
   "cardTransfer": {
     "title": "На карту",

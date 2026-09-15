@@ -214,6 +214,24 @@
     "termValue": "1-3 jours ouvrés",
     "transferMoney": "Transférer l'argent"
   },
+  "transferBetweenAccounts": {
+    "title": "Entre mes comptes",
+    "history": "Historique des virements",
+    "source": "De",
+    "available": "Disponible",
+    "swapAccounts": "Inverser les comptes",
+    "destination": "Vers",
+    "afterTransfer": "Après le virement",
+    "exchangeRate": "Taux de change",
+    "updated": "Mis à jour il y a 15 secondes",
+    "commission": "Frais",
+    "free": "Gratuit",
+    "recipientGets": "Le destinataire reçoit",
+    "processingTime": "Délai de traitement",
+    "instantly": "Instantanément",
+    "transferButton": "Transférer l'argent",
+    "requestError": "Échec de l'envoi des données"
+  },
   "home": {
     "title": "Accueil"
   },

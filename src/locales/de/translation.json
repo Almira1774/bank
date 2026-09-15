@@ -213,6 +213,24 @@
     "termValue": "1-3 Werktage",
     "transferMoney": "Geld überweisen"
   },
+  "transferBetweenAccounts": {
+    "title": "Zwischen eigenen Konten",
+    "history": "Überweisungshistorie",
+    "source": "Von",
+    "available": "Verfügbar",
+    "swapAccounts": "Konten tauschen",
+    "destination": "Nach",
+    "afterTransfer": "Nach der Überweisung",
+    "exchangeRate": "Wechselkurs",
+    "updated": "Vor 15 Sekunden aktualisiert",
+    "commission": "Gebühr",
+    "free": "Kostenlos",
+    "recipientGets": "Empfänger erhält",
+    "processingTime": "Bearbeitungszeit",
+    "instantly": "Sofort",
+    "transferButton": "Geld überweisen",
+    "requestError": "Fehler beim Senden der Daten"
+  },
   "home": {
     "title": "Startseite"
   },

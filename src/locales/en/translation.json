@@ -229,7 +229,8 @@
     "recipientGets": "Recipient will receive",
     "processingTime": "Processing time",
     "instantly": "Instantly",
-    "transferButton": "Transfer money"
+    "transferButton": "Transfer money",
+    "requestError": "Failed to send data"
   },
   "cardTransfer": {
     "title": "To Card",
