@@ -18,6 +18,8 @@ import AddRoundedIcon from "@mui/icons-material/AddRounded";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { AppRoutes } from "@/shared/config/routes";
+import { TransactionLatest } from "@/widgets/transaction-latest";
+import CardSettings from "@/widgets/CardSettings/CardSettings.tsx";
 
 const MyCardsPage = () => {
   const { t } = useTranslation();
@@ -51,10 +53,15 @@ const MyCardsPage = () => {
               <Alert severity="info">{t("accounts.empty")}</Alert>
             )}
             {!isAccountsLoading && !isAccountsError && accounts.length > 0 && (
-              <CardComponent
-                card={cardMock}
-                variant={isDesktop ? "desktop" : "default"}
-              />
+              <div
+                className={styles.cardComponentWrapper}
+                onClick={() => navigate(AppRoutes.INFO_CARD)}
+              >
+                <CardComponent
+                  card={cardMock}
+                  variant={isDesktop ? "desktop" : "default"}
+                />
+              </div>
             )}
 
             <button
@@ -62,14 +69,15 @@ const MyCardsPage = () => {
               className={styles.addCardButton}
               onClick={handleAddCard}
             >
-              <AddRoundedIcon aria-hidden="true" />
+              <AddRoundedIcon aria-hidden="false" />
 
               <span>{t("addNewCard.addButton")}</span>
             </button>
           </Box>
-
+          <TransactionLatest />
           <RecentTransactions limit={3} />
           <MonthlyLimit />
+          <CardSettings/>
           <BottomNavigation />
         </div>
       </Box>

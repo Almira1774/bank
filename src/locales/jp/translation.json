@@ -99,13 +99,31 @@
     "sellAll": "すべて売却",
     "empty": "取引はありません"
   },
+  "transactionItem": {
+    "name": {
+      "Money Transfer": "海外送金",
+      "Grocery": "食料品"
+    },
+    "category": {
+      "Entertainment": "娯楽",
+      "Music": "音楽",
+      "Shopping": "買い物",
+      "Transaction": "取引"
+    }
+  },
   "transaction-table": {
     "recepient": "受信者",
     "category": "カテゴリ",
     "type": "タイプ",
     "amount": "金額は以下の通りです"
   },
-
+  "transactionLatest": {
+    "title": "最新取引",
+    "seeAll": "すべて見る",
+    "loading": "読み込み中...",
+    "empty": "取引フィールドは空っています",
+    "errorMessage": "読み込みエラー"
+  },
   "accountsManagement": {
     "title": "口座管理",
     "createAccount": "口座を作成",
@@ -122,7 +140,6 @@
     "statusBlocked": "ブロック済み",
     "load": "ダウンロード",
     "accountCreated": "アカウントが正常に作成されました！",
-
     "terms": {
       "title": "利用規約",
       "firstRule": "L15.1 当社のアプリケーションDoctor 24×7をご利用いただき、会員登録していただきありがとうございます。",
@@ -173,7 +190,9 @@
     "monthlyDueBy": "毎月の返済期限",
     "enterAmount": "金額を入力",
     "changeCurrency": "通貨を変更",
-    "sendMoney": "送信"
+    "sendMoney": "送信",
+    "fillAllFields": "すべての必須項目を入力してください",
+    "requestError": "データの送信に失敗しました"
   },
   "bankTransfer": {
     "title": "口座へ",
@@ -193,7 +212,40 @@
     "withCommission": "手数料込み",
     "term": "送金時間",
     "termValue": "1-3営業日",
-    "transferMoney": "送金する"
+    "transferMoney": "送金する",
+    "transferError": "振込に失敗しました"
+  },
+  "cardTransfer": {
+    "title": "カード宛振込",
+    "fromCard": "振替元カード",
+    "available": "利用可能残高",
+    "cardNumber": "受取人のカード番号",
+    "recipient": "受取人",
+    "recipientPlaceholder": "氏名は自動的に表示されます",
+    "commission": "手数料",
+    "free": "無料",
+    "term": "入金時間",
+    "instantly": "即時",
+    "transferMoney": "送金する",
+    "requestError": "データの送信に失敗しました"
+  },
+  "transferBetweenAccounts": {
+    "title": "口座間振替",
+    "history": "振込履歴",
+    "source": "振替元口座",
+    "available": "利用可能残高",
+    "swapAccounts": "口座を入れ替える",
+    "destination": "振替先口座",
+    "afterTransfer": "振替後残高",
+    "exchangeRate": "為替レート",
+    "updated": "15秒前に更新",
+    "commission": "手数料",
+    "free": "無料",
+    "recipientGets": "受取額",
+    "processingTime": "入金時間",
+    "instantly": "即時",
+    "transferButton": "送金する",
+    "requestError": "データの送信に失敗しました"
   },
   "home": {
     "title": "ホーム"
@@ -201,7 +253,6 @@
   "logout": {
     "title": "出口"
   },
-
   "selectCurrency": {
     "title": "通貨を選択",
     "searchPlaceholder": "通貨を検索",
@@ -228,5 +279,34 @@
   "common": {
     "loading": "読み込み中...",
     "retry": "再試行"
+  },
+  "infoCard": {
+    "title": "カード情報",
+    "showDetails": "詳細を表示",
+    "noShowDetails": "詳細を非表示",
+    "typeCard": "カードの種類",
+    "currency": "通貨",
+    "status": "ステータス",
+    "available": "利用可能額",
+    "ownFunds": "自己資金"
+  },
+  "cardSettings": {
+    "title": "カード設定",
+    "cardManagement": {
+      "primary": "カード管理",
+      "secondary": "カードの利用停止、再発行など"
+    },
+    "changePIN": {
+      "primary": "PINコードの変更",
+      "secondary": "カードの新しいPINコードを設定"
+    },
+    "security": {
+      "primary": "セキュリティ",
+      "secondary": "3Dセキュア、確認、利用制限"
+    },
+    "notifications": {
+      "primary": "通知",
+      "secondary": "カードに関するSMSおよびプッシュ通知"
+    }
   }
 }

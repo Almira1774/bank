@@ -10,9 +10,11 @@ import {
   validateName,
   validateRequired,
 } from "@/shared/ui/Input/validators.ts";
+import { paymentDetails } from "../model/mocks";
 import { DateInput } from "@/shared/ui/Input/presets/DateInput.tsx";
 import { emailRegex } from "@/shared/lib/validation/rules.ts";
 import { Box } from "@mui/material";
+import { useDebitMutation } from "@/entities/account/api/account-api";
 
 export interface RequestMoneyData {
   amount: string;
@@ -23,8 +25,7 @@ export interface RequestMoneyData {
 }
 
 interface RequestMoneyFormProps {
-  onSubmit: (data: RequestMoneyData) => void;
-  isLoading?: boolean;
+  onSucces?: () => void;
   initialData?: {
     fullName: string;
     email: string;
@@ -34,12 +35,11 @@ interface RequestMoneyFormProps {
 }
 
 export const RequestMoneyForm = ({
-  onSubmit,
-  isLoading = false,
-  initialData,
+  initialData, onSucces
 }: RequestMoneyFormProps) => {
-  const { t } = useTranslation();
 
+  const { t } = useTranslation();
+  const [requestMoneyAction, { isLoading, }] = useDebitMutation();
   const [payerName, setPayerName] = useState<string>(initialData?.fullName || "");
   const [email, setEmail] = useState<string>(initialData?.email || "");
   const [description, setDescription] = useState<string>(initialData?.description || "");
@@ -70,23 +70,43 @@ export const RequestMoneyForm = ({
     isMonthlyDueByValid &&
     isAmountValid;
 
-  const handleSubmit = (e: React.SyntheticEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
+
     e.preventDefault();
     setFormError("");
 
     if (!isFormValid) {
-      setFormError(t("requestMoney.fillAllFields"));
+      setFormError(t(`requestMoney.fillAllFields`));
       return;
     }
+    try {
+      const idempotencyKey = crypto.randomUUID();
 
-    onSubmit({
-      amount,
-      payerName,
-      email,
-      description,
-      monthlyDueBy,
-    });
+      await requestMoneyAction({
+        sourceAccountId: paymentDetails.sourceAccountId,
+        targetAccountId: paymentDetails.targetAccountId,
+        amount: Number(amount),
+        currency: paymentDetails.currency,
+        idempotencyKey: idempotencyKey,
+      }).unwrap();
+
+      setFormError("");
+      setAmount("");
+      setDay("");
+      setDescription("");
+      setEmail("");
+      setMonth("");
+      setPayerName("");
+      setYear("");
+      onSucces?.(); // уведомляем родителя об успешном завершении запроса
+    }
+
+    catch {
+      setFormError(t(`requestMoney.requestError`))
+    }
+
   };
+
 
   return (
     <form className={styles.form} onSubmit={handleSubmit}>

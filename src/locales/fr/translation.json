@@ -99,13 +99,31 @@
     "sellAll": "Tout vendre",
     "empty": "Aucune transaction"
   },
+  "transactionItem": {
+    "name": {
+      "Money Transfer": "Virement bancaire",
+      "Grocery": "Courses"
+    },
+    "category": {
+      "Entertainment": "Divertissement",
+      "Music": "Musique",
+      "Shopping": "Courses",
+      "Transaction": "Transaction"
+    }
+  },
   "transaction-table": {
     "recepient": "Destinataire",
     "category": "Catégorie",
     "type": "Type",
     "amount": "Montant"
   },
-
+  "transactionLatest": {
+    "title": "Dernières transactions",
+    "seeAll": "Voir tout",
+    "loading": "Chargement...",
+    "empty": "Le champ de transaction est vide",
+    "errorMessage": "Erreur de chargement"
+  },
   "accountsManagement": {
     "title": "Gestion des comptes",
     "createAccount": "Créer un compte",
@@ -122,7 +140,6 @@
     "statusBlocked": "Bloqué",
     "load": "Télécharger",
     "accountCreated": "Compte créé avec succès!",
-
     "terms": {
       "title": "Conditions générales",
       "firstRule": "L15.1 Merci de visiter notre application Doctor 24×7 et de vous être inscrit en tant que membre.",
@@ -173,7 +190,9 @@
     "monthlyDueBy": "À rembourser avant le",
     "enterAmount": "Entrez le montant",
     "changeCurrency": "Changer de devise ?",
-    "sendMoney": "Envoyer la demande"
+    "sendMoney": "Envoyer la demande",
+    "fillAllFields": "Veuillez remplir tous les champs obligatoires",
+    "requestError": "Échec de l'envoi des données"
   },
   "bankTransfer": {
     "title": "Vers le compte",
@@ -193,7 +212,40 @@
     "withCommission": "Commission incluse",
     "term": "Délai de transfert",
     "termValue": "1-3 jours ouvrés",
-    "transferMoney": "Transférer l'argent"
+    "transferMoney": "Transférer l'argent",
+    "transferError": "Échec du transfert"
+  },
+  "cardTransfer": {
+    "title": "Vers une carte",
+    "fromCard": "Depuis la carte",
+    "available": "Disponible",
+    "cardNumber": "Numéro de carte du destinataire",
+    "recipient": "Destinataire",
+    "recipientPlaceholder": "Le nom s'affichera automatiquement",
+    "commission": "Frais",
+    "free": "Gratuit",
+    "term": "Délai de traitement",
+    "instantly": "Instantanément",
+    "transferMoney": "Transférer l'argent",
+    "requestError": "Échec de l'envoi des données"
+  },
+  "transferBetweenAccounts": {
+    "title": "Entre mes comptes",
+    "history": "Historique des virements",
+    "source": "De",
+    "available": "Disponible",
+    "swapAccounts": "Inverser les comptes",
+    "destination": "Vers",
+    "afterTransfer": "Après le virement",
+    "exchangeRate": "Taux de change",
+    "updated": "Mis à jour il y a 15 secondes",
+    "commission": "Frais",
+    "free": "Gratuit",
+    "recipientGets": "Le destinataire reçoit",
+    "processingTime": "Délai de traitement",
+    "instantly": "Instantanément",
+    "transferButton": "Transférer l'argent",
+    "requestError": "Échec de l'envoi des données"
   },
   "home": {
     "title": "Accueil"
@@ -227,5 +279,34 @@
   "common": {
     "loading": "Chargement...",
     "retry": "Réessayer"
+  },
+  "infoCard": {
+    "title": "Informations sur la carte",
+    "showDetails": "Afficher les détails",
+    "noShowDetails": "Masquer les détails",
+    "typeCard": "Type de carte",
+    "currency": "Devise",
+    "status": "Statut",
+    "available": "Disponible",
+    "ownFunds": "Fonds propres"
+  },
+  "cardSettings": {
+    "title": "Paramètres de la carte",
+    "cardManagement": {
+      "primary": "Gestion de la carte",
+      "secondary": "Blocage, réémission de la carte et plus"
+    },
+    "changePIN": {
+      "primary": "Modifier le code PIN",
+      "secondary": "Définissez un nouveau code PIN pour votre carte"
+    },
+    "security": {
+      "primary": "Sécurité",
+      "secondary": "3D Secure, confirmations et limites"
+    },
+    "notifications": {
+      "primary": "Notifications",
+      "secondary": "Notifications SMS et push pour votre carte"
+    }
   }
 }

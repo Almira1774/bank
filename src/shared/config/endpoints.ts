@@ -12,6 +12,9 @@ export const API_ENDPOINTS = {
     CREATE: API_BASE_URLS.ACCOUNT + "/accounts",
     BLOCK: (id: string) => API_BASE_URLS.ACCOUNT + `/accounts/${id}/block`,
     GET_MY_ACCOUNTS: API_BASE_URLS.ACCOUNT + "/accounts/me",
+    DEBIT: API_BASE_URLS.ACCOUNT + "/accounts/debit",
+    CREDIT: API_BASE_URLS.ACCOUNT + "/accounts/credit",
+    COMPENSATE: API_BASE_URLS.ACCOUNT + "/accounts/compensate",
   },
   TRANSACTIONS: {
     GET: API_BASE_URLS.TRANSACTIONS + "/transactions",

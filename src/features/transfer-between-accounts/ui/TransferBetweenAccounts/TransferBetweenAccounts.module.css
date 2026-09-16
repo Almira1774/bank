@@ -23,6 +23,15 @@
   color: var(--color-primary-hover);
 }
 
+.errorMessage {
+  color: #d32f2f;
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+  padding: 8px 0;
+}
+
+
 .accountsRow {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 76px minmax(0, 1fr);

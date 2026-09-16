@@ -17,6 +17,14 @@
     transform 0.2s ease;
 }
 
+.errorMessage {
+  color: #d32f2f;
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+  padding: 8px 0;
+}
+
 .cardBlock:hover {
   background: var(--color-bg-hover);
   transform: translateY(-2px);
