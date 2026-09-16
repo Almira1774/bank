@@ -203,7 +203,9 @@
     "monthlyDueBy": "Monthly due by",
     "enterAmount": "Enter Your Amount",
     "changeCurrency": "Change Currency?",
-    "sendMoney": "Send Money"
+    "sendMoney": "Send Money",
+    "fillAllFields": "Please fill in all required fields",
+    "requestError": "Failed to send data"
   },
   "sendMoney": {
     "sendTo": "Send to",
@@ -227,7 +229,8 @@
     "recipientGets": "Recipient will receive",
     "processingTime": "Processing time",
     "instantly": "Instantly",
-    "transferButton": "Transfer money"
+    "transferButton": "Transfer money",
+    "requestError": "Failed to send data"
   },
   "cardTransfer": {
     "title": "To Card",
@@ -240,7 +243,8 @@
     "free": "Free",
     "term": "Transfer time",
     "instantly": "Instantly",
-    "transferMoney": "Transfer money"
+    "transferMoney": "Transfer money",
+    "requestError": "Failed to send data"
   },
   "bankTransfer": {
     "title": "To Account",
@@ -260,7 +264,8 @@
     "withCommission": "Including commission",
     "term": "Transfer time",
     "termValue": "1-3 business days",
-    "transferMoney": "Transfer money"
+    "transferMoney": "Transfer money",
+    "transferError": "Transfer failed"
   },
   "home": {
     "title": "Home"
