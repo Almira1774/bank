@@ -212,7 +212,8 @@
     "withCommission": "手数料込み",
     "term": "送金時間",
     "termValue": "1-3営業日",
-    "transferMoney": "送金する"
+    "transferMoney": "送金する",
+    "transferError": "振込に失敗しました"
   },
   "cardTransfer": {
     "title": "カード宛振込",

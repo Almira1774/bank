@@ -211,7 +211,8 @@
     "withCommission": "Inklusive Provision",
     "term": "Überweisungsdauer",
     "termValue": "1-3 Werktage",
-    "transferMoney": "Geld überweisen"
+    "transferMoney": "Geld überweisen",
+    "transferError": "Überweisung fehlgeschlagen"
   },
   "cardTransfer": {
     "title": "На карту",

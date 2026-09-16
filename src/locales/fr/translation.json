@@ -212,7 +212,8 @@
     "withCommission": "Commission incluse",
     "term": "Délai de transfert",
     "termValue": "1-3 jours ouvrés",
-    "transferMoney": "Transférer l'argent"
+    "transferMoney": "Transférer l'argent",
+    "transferError": "Échec du transfert"
   },
   "cardTransfer": {
     "title": "Vers une carte",
