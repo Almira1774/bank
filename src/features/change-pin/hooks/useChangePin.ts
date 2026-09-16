@@ -12,7 +12,6 @@ export const useChangePin = () => {
   const [success, setSuccess] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
-
   const handleSubmit = async () => {
     setError(null);
     setSuccess(null);

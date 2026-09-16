@@ -37,9 +37,9 @@ export const accountApi = baseApi.injectEndpoints({
       providesTags: (result) =>
         result
           ? [
-            ...result.content.map(({ id }) => ({ type: "Account" as const, id })),
-            { type: "Account", id: "LIST" },
-          ]
+              ...result.content.map(({ id }) => ({ type: "Account" as const, id })),
+              { type: "Account", id: "LIST" },
+            ]
           : [{ type: "Account", id: "LIST" }],
     }),
     getAccountById: build.query<Account, string>({

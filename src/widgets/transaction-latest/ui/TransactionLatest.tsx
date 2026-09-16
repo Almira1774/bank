@@ -42,8 +42,6 @@ export const TransactionLatest = () => {
     );
   }
 
-  
-
   return (
     <Box component="section" className={styles.container}>
       <Box component="div" className={styles.titleContainer}>

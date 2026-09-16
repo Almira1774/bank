@@ -257,7 +257,7 @@
   transition: background 0.2s;
 }
 
-.detailRow:focus-within+.divider {
+.detailRow:focus-within + .divider {
   background: #1a73e8;
 }
 

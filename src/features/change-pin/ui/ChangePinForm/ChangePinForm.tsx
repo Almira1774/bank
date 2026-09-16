@@ -60,35 +60,33 @@ const ChangePinForm = () => {
   );
 
   const renderInputs = (
-  refs: React.RefObject<(HTMLInputElement | null)[]>,
-  value: string,
-  setter: (val: string) => void
-) => {
-  return [0, 1, 2, 3].map((i) => (
-    <input
-      key={i}
-      ref={(el) => { refs.current[i] = el; }}
-      type="password"
-      maxLength={1}
-      value={value[i] || ""}
-      onChange={(e) =>
-        handlePinChange(i, e.target.value, setter, value, refs)
-      }
-      onKeyDown={(e) => handleKeyDown(e, i, value, refs)}
-      className={styles.pinInput}
-      placeholder="•"
-    />
-  ));
-};
+    refs: React.RefObject<(HTMLInputElement | null)[]>,
+    value: string,
+    setter: (val: string) => void
+  ) => {
+    return [0, 1, 2, 3].map((i) => (
+      <input
+        key={i}
+        ref={(el) => {
+          refs.current[i] = el;
+        }}
+        type="password"
+        maxLength={1}
+        value={value[i] || ""}
+        onChange={(e) => handlePinChange(i, e.target.value, setter, value, refs)}
+        onKeyDown={(e) => handleKeyDown(e, i, value, refs)}
+        className={styles.pinInput}
+        placeholder="•"
+      />
+    ));
+  };
 
   return (
     <div className={styles.container}>
       {success && <div className={styles.successMessage}>{success}</div>}
       {error && <div className={styles.errorMessage}>{error}</div>}
 
-      <Typography className={styles.pageTitle}>
-        Изменение PIN-кода
-      </Typography>
+      <Typography className={styles.pageTitle}>Изменение PIN-кода</Typography>
 
       <Box className={styles.cardWrapper}>
         <CardComponent card={cardMock} variant="default" />
@@ -97,9 +95,7 @@ const ChangePinForm = () => {
       <div className={styles.fieldWrapper}>
         <div className={styles.labelWithCircle}>
           <span className={styles.circle}>1</span>
-          <Typography className={styles.labelText}>
-            Введите текущий PIN-код
-          </Typography>
+          <Typography className={styles.labelText}>Введите текущий PIN-код</Typography>
         </div>
         <div className={styles.pinContainer}>
           {renderInputs(currentRefs, currentPin, setCurrentPin)}
@@ -109,9 +105,7 @@ const ChangePinForm = () => {
       <div className={styles.fieldWrapper}>
         <div className={styles.labelWithCircle}>
           <span className={styles.circle}>2</span>
-          <Typography className={styles.labelText}>
-            Введите новый PIN-код
-          </Typography>
+          <Typography className={styles.labelText}>Введите новый PIN-код</Typography>
         </div>
         <div className={styles.pinContainer}>
           {renderInputs(newRefs, newPin, setNewPin)}
@@ -124,9 +118,7 @@ const ChangePinForm = () => {
       <div className={styles.fieldWrapper}>
         <div className={styles.labelWithCircle}>
           <span className={styles.circle}>3</span>
-          <Typography className={styles.labelText}>
-            Повторите новый PIN-код
-          </Typography>
+          <Typography className={styles.labelText}>Повторите новый PIN-код</Typography>
         </div>
         <div className={styles.pinContainer}>
           {renderInputs(confirmRefs, confirmPin, setConfirmPin)}
@@ -138,13 +130,10 @@ const ChangePinForm = () => {
           <span className={styles.securityCircle}>
             <LockIcon sx={{ fontSize: 16, color: "white" }} />
           </span>
-          <Typography className={styles.securityTitle}>
-            Для вашей безопасности
-          </Typography>
+          <Typography className={styles.securityTitle}>Для вашей безопасности</Typography>
         </div>
         <Typography className={styles.securityText}>
-          Не используйте простые комбинации, такие как 1234, 0000 или дату
-          рождения.
+          Не используйте простые комбинации, такие как 1234, 0000 или дату рождения.
         </Typography>
       </div>
 

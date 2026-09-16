@@ -125,8 +125,9 @@ export const CardTransferForm = () => {
               {cards.map((card) => (
                 <div
                   key={card.id}
-                  className={`${styles.cardListItem} ${selectedCard.id === card.id ? styles.cardListItemSelected : ""
-                    }`}
+                  className={`${styles.cardListItem} ${
+                    selectedCard.id === card.id ? styles.cardListItemSelected : ""
+                  }`}
                   onClick={(e) => {
                     e.stopPropagation();
                     setSelectedCard(card);

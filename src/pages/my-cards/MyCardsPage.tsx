@@ -77,7 +77,7 @@ const MyCardsPage = () => {
           <TransactionLatest />
           <RecentTransactions limit={3} />
           <MonthlyLimit />
-          <CardSettings/>
+          <CardSettings />
           <BottomNavigation />
         </div>
       </Box>
