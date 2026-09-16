@@ -25,6 +25,7 @@ export interface RequestMoneyData {
 }
 
 interface RequestMoneyFormProps {
+  onSucces?: () => void;
   initialData?: {
     fullName: string;
     email: string;
@@ -34,7 +35,7 @@ interface RequestMoneyFormProps {
 }
 
 export const RequestMoneyForm = ({
-  initialData,
+  initialData, onSucces
 }: RequestMoneyFormProps) => {
 
   const { t } = useTranslation();
@@ -97,6 +98,7 @@ export const RequestMoneyForm = ({
       setMonth("");
       setPayerName("");
       setYear("");
+      onSucces?.(); // уведомляем родителя об успешном завершении запроса
     }
 
     catch {
