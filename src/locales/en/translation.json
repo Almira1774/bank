@@ -243,7 +243,8 @@
     "free": "Free",
     "term": "Transfer time",
     "instantly": "Instantly",
-    "transferMoney": "Transfer money"
+    "transferMoney": "Transfer money",
+    "requestError": "Failed to send data"
   },
   "bankTransfer": {
     "title": "To Account",

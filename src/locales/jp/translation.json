@@ -214,6 +214,20 @@
     "termValue": "1-3営業日",
     "transferMoney": "送金する"
   },
+  "cardTransfer": {
+    "title": "カード宛振込",
+    "fromCard": "振替元カード",
+    "available": "利用可能残高",
+    "cardNumber": "受取人のカード番号",
+    "recipient": "受取人",
+    "recipientPlaceholder": "氏名は自動的に表示されます",
+    "commission": "手数料",
+    "free": "無料",
+    "term": "入金時間",
+    "instantly": "即時",
+    "transferMoney": "送金する",
+    "requestError": "データの送信に失敗しました"
+  },
   "transferBetweenAccounts": {
     "title": "口座間振替",
     "history": "振込履歴",

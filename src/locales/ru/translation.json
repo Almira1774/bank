@@ -244,7 +244,8 @@
     "free": "Бесплатно",
     "term": "Срок зачисления",
     "instantly": "Моментально",
-    "transferMoney": "Перевести деньги"
+    "transferMoney": "Перевести деньги",
+    "requestError": "Ошибка отправки данных"
   },
   "bankTransfer": {
     "title": "На счёт",
