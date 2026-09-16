@@ -1,5 +1,6 @@
+import { ToastTypeEnum } from "@/shared/types/enums";
 export interface ToastMessage {
-  type: "success" | "info" | "warning" | "error";
+  type: ToastTypeEnum;
   message: string;
   action?: {
     label: string;

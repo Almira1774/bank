@@ -15,6 +15,7 @@ import SignUpPage from "@/pages/sign-up/SignUpPage";
 import HomePage from "@/pages/home/HomePage";
 import StatisticsPage from "@/pages/statistics/StatisticsPage";
 import MyCardsPage from "@/pages/my-cards/MyCardsPage";
+import InfoAboutCard from "@/pages/info-card/InfoAboutCard";
 import SettingsPage from "@/pages/settings/SettingsPage";
 import TransactionHistoryPage from "@/pages/transaction-history/TransactionHistoryPage";
 import ProfilePage from "@/pages/profile/ui/ProfilePage";
@@ -26,6 +27,7 @@ import TransferBetweenAccountsPage from "@/pages/transfer-between-accounts/Trans
 import RequestMoneyPage from "@/pages/request-money/RequestMoneyPage";
 import LanguagePage from "@/pages/language/LanguagePage";
 import ChangePasswordPage from "@/pages/change-password/ChangePasswordPage";
+import ChangePinPage from "@/pages/change-pin/ChangePinPage";
 import TermsPage from "@/pages/terms/ui/TermsPage.tsx";
 
 import AccountsManagementPage from "@/pages/accounts-management/AccountsManagementPage";
@@ -62,6 +64,7 @@ const router = createBrowserRouter([
       { path: AppRoutes.STATISTICS, element: <StatisticsPage /> },
       { path: AppRoutes.MY_CARDS, element: <MyCardsPage /> },
       { path: AppRoutes.SETTINGS, element: <SettingsPage /> },
+      { path: AppRoutes.INFO_CARD, element: <InfoAboutCard /> },
     ],
   },
 
@@ -99,7 +102,7 @@ const router = createBrowserRouter([
       { path: AppRoutes.CHANGE_PASSWORD, element: <ChangePasswordPage /> },
       { path: AppRoutes.TERMS, element: <TermsPage /> },
       { path: AppRoutes.NOTIFICATIONS, element: <NotificationsPage /> },
-
+      { path: "/change-pin", element: <ChangePinPage /> },
       { path: AppRoutes.ACCOUNTS_MANAGEMENT, element: <AccountsManagementPage /> },
     ],
   },
