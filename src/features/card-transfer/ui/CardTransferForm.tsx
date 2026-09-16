@@ -13,6 +13,7 @@ import { cardMock } from "@/widgets/card/cardMock";
 import type { cardType } from "@/shared/types/cardType";
 import { formatCardNumber, lastDigits, parseCardNumber } from "@/shared/ui/Input/masks";
 import { validateCard } from "@/shared/ui/Input/validators";
+import { useDebitMutation } from "@/entities/account/api/account-api";
 
 const cards: (cardType & { balance: string })[] = [
   { ...cardMock, balance: "2 458,65" },
@@ -40,7 +41,8 @@ const iconSx = { fill: "var(--color-text-secondary)", width: 24 };
 
 export const CardTransferForm = () => {
   const { t } = useTranslation();
-
+  const [transferRequest, { isLoading }] = useDebitMutation();
+  const [requestError, setRequestError] = useState<string>("");
   const [selectedCard, setSelectedCard] = useState(cards[0]);
   const [showCardSelector, setShowCardSelector] = useState(false);
   const [cardNumber, setCardNumber] = useState("");
@@ -57,9 +59,26 @@ export const CardTransferForm = () => {
       setRecipientName("");
     }
   };
+  const handleChange = async (e: React.SyntheticEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
+    try {
+      const idempotencyKey = crypto.randomUUID();
+      await transferRequest({
+        sourceAccountId: selectedCard.id,
+        targetAccountId: cardNumber,
+        amount: 100,
+        currency: "USD",
+        idempotencyKey: idempotencyKey,
+      }).unwrap();
+      setRequestError("");
+      setCardNumber("");
+    } catch {
+      setRequestError(t(`cardTransfer.requestError`));
+    }
+  };
   return (
-    <>
+    <form onSubmit={handleChange}>
       <div className={styles.contentWrapper}>
         {/* С карты */}
         <Box
@@ -106,9 +125,8 @@ export const CardTransferForm = () => {
               {cards.map((card) => (
                 <div
                   key={card.id}
-                  className={`${styles.cardListItem} ${
-                    selectedCard.id === card.id ? styles.cardListItemSelected : ""
-                  }`}
+                  className={`${styles.cardListItem} ${selectedCard.id === card.id ? styles.cardListItemSelected : ""
+                    }`}
                   onClick={(e) => {
                     e.stopPropagation();
                     setSelectedCard(card);
@@ -196,7 +214,11 @@ export const CardTransferForm = () => {
         </Box>
       </div>
 
-      <button className={styles.sendButton}>{t("cardTransfer.transferMoney")}</button>
-    </>
+      {requestError && <p className={styles.errorMessage}>{requestError}</p>}
+
+      <button disabled={isLoading} type="submit" className={styles.sendButton}>
+        {t("cardTransfer.transferMoney")}
+      </button>
+    </form>
   );
 };

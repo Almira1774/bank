@@ -49,3 +49,27 @@ export interface AccountPageResponse {
   totalElements: number;
   totalPages: number;
 }
+
+export interface DebitRequest {
+  sourceAccountId: string;
+  targetAccountId: string;
+  amount: number;
+  currency: string;
+  idempotencyKey: string;
+}
+
+export interface CreditRequest {
+  sourceAccountId: string;
+  targetAccountId: string;
+  amount: number;
+  currency: string;
+  idempotencyKey: string;
+}
+
+export interface CompensateRequest {
+  sourceAccountId: string;
+  targetAccountId: string;
+  amount: number;
+  currency: string;
+  idempotencyKey: string;
+}

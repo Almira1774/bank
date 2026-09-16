@@ -17,6 +17,14 @@
     transform 0.2s ease;
 }
 
+.errorMessage {
+  color: #d32f2f;
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+  padding: 8px 0;
+}
+
 .cardBlock:hover {
   background: var(--color-bg-hover);
   transform: translateY(-2px);
@@ -249,7 +257,7 @@
   transition: background 0.2s;
 }
 
-.detailRow:focus-within + .divider {
+.detailRow:focus-within+.divider {
   background: #1a73e8;
 }
 
@@ -270,6 +278,7 @@
   margin: 0 0 6px;
   color: var(--color-text-primary);
 }
+
 .commissionValue {
   font-size: 16px;
   font-weight: 500;

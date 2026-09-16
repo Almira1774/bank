@@ -12,6 +12,7 @@ import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import HistoryOutlinedIcon from "@mui/icons-material/HistoryOutlined";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { useTranslation } from "react-i18next";
+import { useDebitMutation } from "@/entities/account/api/account-api";
 
 interface TransferBetweenAccountsProps {
   amount: string;
@@ -19,8 +20,10 @@ interface TransferBetweenAccountsProps {
 
 export function TransferBetweenAccounts({ amount }: TransferBetweenAccountsProps) {
   const { t } = useTranslation();
+  const [transferMoneyAction, { isLoading }] = useDebitMutation();
   const [sourceAccount, setSourceAccount] = useState(transferAccounts[0]);
   const [targetAccount, setTargetAccount] = useState(transferAccounts[1]);
+  const [requestError, setRequestError] = useState<string>("");
 
   const numericAmount = Number(amount);
   const isUsdToEur = sourceAccount.currency === "USD" && targetAccount.currency === "EUR";
@@ -37,8 +40,27 @@ export function TransferBetweenAccounts({ amount }: TransferBetweenAccountsProps
     setTargetAccount(previousSourceAccount);
   };
 
+  const handleChange = async (e: React.SyntheticEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    try {
+      setRequestError("");
+      const idempotencyKey = crypto.randomUUID();
+
+      await transferMoneyAction({
+        sourceAccountId: sourceAccount.id,
+        targetAccountId: targetAccount.id,
+        amount: Number(amount),
+        currency: sourceAccount.currency,
+        idempotencyKey: idempotencyKey,
+      }).unwrap();
+    } catch {
+      setRequestError(t(`transferBetweenAccounts.requestError`));
+    }
+  };
+
   return (
-    <div className={styles.page}>
+    <form onSubmit={handleChange} className={styles.page}>
       <div className={styles.pageActions}>
         <Link to={AppRoutes.TRANSACTION_HISTORY} className={styles.historyLink}>
           <HistoryOutlinedIcon aria-hidden="true" />
@@ -141,10 +163,12 @@ export function TransferBetweenAccounts({ amount }: TransferBetweenAccountsProps
           </div>
         </section>
 
-        <button type="button" className={styles.transferButton}>
+        {requestError && <p className={styles.errorMessage}>{requestError}</p>}
+
+        <button type="submit" disabled={isLoading} className={styles.transferButton}>
           {t("transferBetweenAccounts.transferButton")}
         </button>
       </div>
-    </div>
+    </form>
   );
 }
