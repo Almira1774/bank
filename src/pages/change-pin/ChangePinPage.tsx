@@ -11,4 +11,3 @@ const ChangePinPage = () => {
 };
 
 export default ChangePinPage;
-

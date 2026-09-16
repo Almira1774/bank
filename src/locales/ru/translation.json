@@ -203,7 +203,9 @@
     "monthlyDueBy": "Срок возврата до",
     "enterAmount": "Введите сумму",
     "changeCurrency": "Сменить валюту?",
-    "sendMoney": "Отправить запрос"
+    "sendMoney": "Отправить запрос",
+    "fillAllFields": "Пожалуйста, заполните все обязательные поля",
+    "requestError": "Ошибка отправки данных"
   },
   "sendMoney": {
     "title": "Отправить деньги",
@@ -228,7 +230,8 @@
     "recipientGets": "Получатель получит",
     "processingTime": "Срок зачисления",
     "instantly": "Моментально",
-    "transferButton": "Перевести деньги"
+    "transferButton": "Перевести деньги",
+    "requestError": "Ошибка отправки данных"
   },
   "cardTransfer": {
     "title": "На карту",
@@ -241,7 +244,8 @@
     "free": "Бесплатно",
     "term": "Срок зачисления",
     "instantly": "Моментально",
-    "transferMoney": "Перевести деньги"
+    "transferMoney": "Перевести деньги",
+    "requestError": "Ошибка отправки данных"
   },
   "bankTransfer": {
     "title": "На счёт",
@@ -261,7 +265,8 @@
     "withCommission": "С учётом комиссии",
     "term": "Срок зачисления",
     "termValue": "1–3 рабочих дня",
-    "transferMoney": "Перевести деньги"
+    "transferMoney": "Перевести деньги",
+    "transferError": "Не удалось совершить перевод"
   },
   "selectCurrency": {
     "title": "Выберите валюту",

@@ -3,38 +3,15 @@ import { IconButton } from "@mui/material";
 import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
 import { useTranslation } from "react-i18next";
 import styles from "./RequestMoneyPage.module.css";
-import { useState } from "react";
-import {
-  type RequestMoneyData,
-  RequestMoneyForm,
-} from "@/features/request-money/ui/RequestMoneyForm.tsx";
+import { RequestMoneyForm } from "@/features/request-money/ui/RequestMoneyForm.tsx";
 import { useAppSelector } from "@/shared/hooks/hooksReducer.ts";
 
 const RequestMoneyPage = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const user = useAppSelector((state) => state.bank.user);
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (data: RequestMoneyData) => {
-    setIsSubmitting(true);
-    try {
-      console.log("Отправка запроса:", {
-        ...data,
-        payer: user?.fullName || data.payerName,
-        email: user?.email || data.email,
-      });
-
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-
-      // Успех - редирект или уведомление
-      navigate(-1);
-    } catch (error) {
-      console.error("Ошибка:", error);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  const handleSucces = () => navigate(-1);
 
   const initialData = user
     ? {
@@ -62,11 +39,7 @@ const RequestMoneyPage = () => {
         <div className={styles.placeholder} />
       </div>
 
-      <RequestMoneyForm
-        onSubmit={handleSubmit}
-        isLoading={isSubmitting}
-        initialData={initialData}
-      />
+      <RequestMoneyForm onSucces={handleSucces} initialData={initialData} />
     </div>
   );
 };

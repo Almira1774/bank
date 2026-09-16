@@ -26,7 +26,7 @@
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background-color: var(--color-primary, #0066FF);
+  background-color: var(--color-primary, #0066ff);
   color: white;
   font-size: 14px;
   font-weight: 600;
@@ -46,13 +46,13 @@
   border: 2px solid var(--color-border, #d0d0d0);
   border-radius: 12px;
   outline: none;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: var(--color-background);
   color: var(--color-text-primary, black);
 }
 
 .pinInput:focus {
-  border-color: var(--color-primary, #0066FF);
+  border-color: var(--color-primary, #0066ff);
 }
 
 .securityWrapper {
@@ -75,7 +75,7 @@
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background-color: var(--color-primary, #0066FF);
+  background-color: var(--color-primary, #0066ff);
   flex-shrink: 0;
 }
 
@@ -85,9 +85,8 @@
   margin-bottom: 24px;
   padding-left: 32px;
   font-size: 2rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-
 
 .cardWrapper {
   max-width: 700px;
@@ -97,7 +96,7 @@
 .labelText {
   font-weight: 600;
   font-size: 16px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: var(--color-text-primary);
 }
 
@@ -110,13 +109,13 @@
 .securityTitle {
   font-weight: 500;
   color: var(--color-text-primary);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
 }
 
 .securityText {
   color: var(--color-text-secondary);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
   margin-top: 4px;
   margin-left: 32px;
@@ -126,14 +125,14 @@
   width: 100%;
   height: 56px;
   margin: 20px auto 0;
-  background-color: var(--color-primary, #0066FF);
+  background-color: var(--color-primary, #0066ff);
   border: none;
   border-radius: 16px;
   color: white;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   cursor: pointer;
   transition: background-color 0.2s;
   display: flex;
@@ -143,7 +142,7 @@
 }
 
 .button:hover:not(:disabled) {
-  background-color: var(--color-primary-dark, #0052CC);
+  background-color: var(--color-primary-dark, #0052cc);
 }
 
 .button:disabled {
@@ -172,38 +171,33 @@
 .container .labelText {
   font-size: 16px;
   font-weight: 600;
-  font-family: 'Poppins', sans-serif;
-
+  font-family: "Poppins", sans-serif;
 }
 
 .container .securityTitle {
   font-size: 14px;
   font-weight: 500;
-  font-family: 'Poppins', sans-serif;
-
+  font-family: "Poppins", sans-serif;
 }
 
 .container .securityText {
   font-size: 14px;
-   margin-left: 36px;
-   font-family: 'Poppins', sans-serif;
-
+  margin-left: 36px;
+  font-family: "Poppins", sans-serif;
 }
 
 .container .hintText {
-font-size: 14px;
-font-family: 'Poppins', sans-serif;
-
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
 }
 
 .container .pageTitle {
-   font-weight: 700;
+  font-weight: 700;
   color: var(--color-text-primary);
   margin-bottom: 24px;
   padding-left: 32px;
   font-size: 24px;
-  font-family: 'Poppins', sans-serif;
-
+  font-family: "Poppins", sans-serif;
 }
 
 .cardWrapper {

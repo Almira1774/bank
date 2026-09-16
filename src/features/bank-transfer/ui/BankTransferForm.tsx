@@ -10,6 +10,7 @@ import styles from "./BankTransferForm.module.css";
 import { cardMock } from "@/widgets/card/cardMock";
 import type { cardType } from "@/shared/types/cardType";
 import { formatAmount, parseAmount } from "@/shared/ui/Input/masks";
+import { useDebitMutation } from "@/entities/account/api/account-api";
 
 const cards: (cardType & { balance: string })[] = [
   { ...cardMock, balance: "2 458,65" },
@@ -42,7 +43,9 @@ const iconSx = { fill: "var(--color-text-secondary)", width: 24 };
 
 export const BankTransferForm = () => {
   const { t } = useTranslation();
+  const [bankTransfer, { isLoading }] = useDebitMutation();
 
+  const [transferError, setTransferError] = useState<string>("");
   const [selectedCard, setSelectedCard] = useState(cards[0]);
   const [showCardSelector, setShowCardSelector] = useState(false);
   const [amount, setAmount] = useState("36.00");
@@ -66,8 +69,32 @@ export const BankTransferForm = () => {
     setAmount(parsed);
   };
 
+  const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    try {
+      const idempotencyKey = crypto.randomUUID();
+      await bankTransfer({
+        sourceAccountId: selectedCard.id,
+        targetAccountId: accountNumber,
+        amount: Number(amount),
+        currency: "USD",
+        idempotencyKey: idempotencyKey,
+      }).unwrap();
+
+      setTransferError("");
+      setAccountNumber("");
+      setAmount("");
+      setBank("");
+      setBankCountry("");
+      setRecipient("");
+      setSwift("");
+    } catch {
+      setTransferError(t(`bankTransfer.transferError`));
+    }
+  };
   return (
-    <>
+    <form onSubmit={handleSubmit}>
       <div className={styles.contentWrapper}>
         {/* Спишется с */}
         <Box
@@ -279,7 +306,11 @@ export const BankTransferForm = () => {
         </Box>
       </div>
 
-      <button className={styles.sendButton}>{t("bankTransfer.transferMoney")}</button>
-    </>
+      {transferError && <p className={styles.errorMessage}>{transferError}</p>}
+
+      <button disabled={isLoading} type="submit" className={styles.sendButton}>
+        {t("bankTransfer.transferMoney")}
+      </button>
+    </form>
   );
 };

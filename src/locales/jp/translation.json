@@ -190,7 +190,9 @@
     "monthlyDueBy": "毎月の返済期限",
     "enterAmount": "金額を入力",
     "changeCurrency": "通貨を変更",
-    "sendMoney": "送信"
+    "sendMoney": "送信",
+    "fillAllFields": "すべての必須項目を入力してください",
+    "requestError": "データの送信に失敗しました"
   },
   "bankTransfer": {
     "title": "口座へ",
@@ -210,7 +212,40 @@
     "withCommission": "手数料込み",
     "term": "送金時間",
     "termValue": "1-3営業日",
-    "transferMoney": "送金する"
+    "transferMoney": "送金する",
+    "transferError": "振込に失敗しました"
+  },
+  "cardTransfer": {
+    "title": "カード宛振込",
+    "fromCard": "振替元カード",
+    "available": "利用可能残高",
+    "cardNumber": "受取人のカード番号",
+    "recipient": "受取人",
+    "recipientPlaceholder": "氏名は自動的に表示されます",
+    "commission": "手数料",
+    "free": "無料",
+    "term": "入金時間",
+    "instantly": "即時",
+    "transferMoney": "送金する",
+    "requestError": "データの送信に失敗しました"
+  },
+  "transferBetweenAccounts": {
+    "title": "口座間振替",
+    "history": "振込履歴",
+    "source": "振替元口座",
+    "available": "利用可能残高",
+    "swapAccounts": "口座を入れ替える",
+    "destination": "振替先口座",
+    "afterTransfer": "振替後残高",
+    "exchangeRate": "為替レート",
+    "updated": "15秒前に更新",
+    "commission": "手数料",
+    "free": "無料",
+    "recipientGets": "受取額",
+    "processingTime": "入金時間",
+    "instantly": "即時",
+    "transferButton": "送金する",
+    "requestError": "データの送信に失敗しました"
   },
   "home": {
     "title": "ホーム"
