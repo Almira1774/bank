@@ -7,9 +7,4 @@ export type cardType = {
   expiryDate: string;
   cvv: string;
   brand: CardBrand;
-  active?: string;
-  type?: string;
-  currency?: string;
-  available?: string;
-  ownFunds?: string;
 };
